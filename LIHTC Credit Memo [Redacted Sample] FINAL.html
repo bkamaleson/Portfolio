@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>LIHTC Credit Memo [Redacted Sample]</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="11cb7e8c-1da9-805e-b6a1-db0a4e5d3d7c" class="page sans"><header><h1 class="page-title">LIHTC Credit Memo [Redacted Sample]</h1><p id="11cb7e8c-1da9-812e-b727-ed9924066e9a" class="">Credit Memorandum</p><table id="11cb7e8c-1da9-811d-ab3c-c73d368a1d1f" class="simple-table"><tbody><tr id="11cb7e8c-1da9-812e-8690-cae8575d96c3"><td id="mo[N" class=""><strong>Summary</strong></td><td id="wxJV" class=""></td><td id="|}hq" class=""></td></tr><tr id="11cb7e8c-1da9-81c4-a75a-f4572cd66cd8"><td id="mo[N" class=""><strong>Borrower(s)</strong></td><td id="wxJV" class="">[Redacted Company]</td><td id="|}hq" class=""></td></tr><tr id="11cb7e8c-1da9-8111-9328-c627b281ea8c"><td id="mo[N" class=""><strong>Project Sponsor and Developer</strong></td><td id="wxJV" class="">[Redacted Name] and [Redacted Company]</td><td id="|}hq" class=""></td></tr><tr id="11cb7e8c-1da9-81a5-a982-f20d29e2083a"><td id="mo[N" class=""><strong>Lenders</strong></td><td id="wxJV" class="">Lead Lender: [Redacted Company] (&quot;[Redacted Company]&quot;)<br/>Participant: [Redacted Company]<br/>Sub-Participant: [Redacted Company] (&quot;[Redacted Company]&quot;)<br/></td><td id="|}hq" class=""></td></tr><tr id="11cb7e8c-1da9-8173-93aa-f47660a71ced"><td id="mo[N" class=""><strong>Requested Amount</strong></td><td id="wxJV" class="">[Redacted Company] [Redacted Amount]<br/>[Redacted Company] [Redacted Amount]<br/><span style="border-bottom:0.05em solid">[Redacted Company] [Redacted Amount]</span>Total Loan [Redacted Amount]</td><td id="|}hq" class="">Permanent Loan: [Redacted Amount]<br/>[Redacted Company] and [Redacted Company] participations are TBD<br/></td></tr><tr id="11cb7e8c-1da9-812b-980d-c24f5d7a418d"><td id="mo[N" class=""><strong>Purpose of Loan</strong></td><td id="wxJV" class="">Construction and permanent financing of a 9% (55+) LIHTC project located in [Redacted Location].</td><td id="|}hq" class=""></td></tr></tbody></table><table id="11cb7e8c-1da9-81cb-a622-d95592caed97" class="simple-table"><tbody><tr id="11cb7e8c-1da9-81ab-97bf-f1aabff47af8"><td id="^aQt" class=""><strong>Location</strong></td><td id="YEg`" class=""><strong>Property Address:</strong>[Redacted Address]</td><td id="@cBU" class="" style="width:344.00001525878906px"><span style="border-bottom:0.05em solid">Census Tract: [Redacted Census Tract]</span>Tract Population: [Redacted Number]<br/>Tract Median Family Income %: [Redacted Percentage]<br/>Total Housing Units: [Redacted Number]<br/>1- to 4 - Family Units: [Redacted Number]<br/>Owner-Occupied Units: [Redacted Number]<br/>Renter Occupied Units: [Redacted Number]<br/>Owner Occupied (1-4s): [Redacted Number]<br/>Vacant Units: [Redacted Number]<br/></td></tr></tbody></table><table id="11cb7e8c-1da9-815b-adee-f2ef1ee73e74" class="simple-table"><tbody><tr id="11cb7e8c-1da9-8137-b2d4-c973ddf2605e"><td id="AEBq" class=""><strong>LIHTC</strong></td><td id=";wgB" class="">Total [Redacted Amount] in LIHTCs, resulting in [Redacted Amount] in LIHTC Equity to be syndicated by [Redacted Company] (&quot;[Redacted Company]&quot;)</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-8111-ac08-ccb91587f130"><td id="AEBq" class=""><strong>Guarantors</strong></td><td id=";wgB" class=""><span style="border-bottom:0.05em solid">Construction Loan</span>: [Redacted Name] (&quot;Personal Guarantor&quot;), [Redacted Company] (&quot;Corporate Guarantor&quot;) (collectively, &quot;Guarantors&quot;)<span style="border-bottom:0.05em solid">Perm Loan</span>: Non-recourse (as required in LIHTC projects) to Guarantors w/ standard carveouts</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-817c-b71d-ed7750a82598"><td id="AEBq" class=""><strong>Term and Amortization</strong></td><td id=";wgB" class=""><span style="border-bottom:0.05em solid">Construction Loan</span>: [Redacted Number]-month interest-only construction period, with interest due monthly. Borrower option to extend for an additional [Redacted Number] months for a total of [Redacted Number]-months.<span style="border-bottom:0.05em solid">Perm Loan</span>: [Redacted Number]-year maturity. Principal and interest due monthly based on a [Redacted Number]-year amortization.</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-815a-8f40-d354a9884b80"><td id="AEBq" class=""><strong>Loan Fee</strong></td><td id=";wgB" class="">No fee payable to [Redacted Company] ([Redacted Company] will collect [Redacted Percentage])</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-81d2-9a85-eef9c0cdbeb3"><td id="AEBq" class=""><strong>Interest Rate (%)</strong></td><td id=";wgB" class=""><span style="border-bottom:0.05em solid">Construction:</span>[Redacted Percentage] Fixed (subject to a [Redacted Percentage] servicing fee, resulting in net [Redacted Percentage] to [Redacted Company])<span style="border-bottom:0.05em solid">Permanent:</span>[Redacted Percentage] fixed (servicing fee TBD)</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-817b-8b2e-c67352a12911"><td id="AEBq" class=""><strong>Collateral/LTV/DSCR</strong></td><td id=";wgB" class=""><span style="border-bottom:0.05em solid">Collateral and LTV:</span>1st Lien Leasehold DOT.<span style="border-bottom:0.05em solid">LTV:</span>[Redacted Percentage] during Construction, [Redacted Percentage] at Permanent conversion. Refer to Section E for details<span style="border-bottom:0.05em solid">DSCR:</span>Senior Debt DSCR of [Redacted Number]x, Global Debt DSCR of [Redacted Number]x at stabilization (See Appendix D), [Redacted Year] Global DSCR of [Redacted Number]x (See Appendix G)</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-8134-a41c-d8e5b75e473a"><td id="AEBq" class=""><strong>Repayment Sources</strong></td><td id=";wgB" class=""><span style="border-bottom:0.05em solid">ConstructionPermanentPrimary</span>Permanent Financing Rents<span style="border-bottom:0.05em solid">Secondary</span>Liquidation of Collateral Liquidation of Collateral<span style="border-bottom:0.05em solid">Tertiary</span>Guarantor</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-812a-b69e-f587b41ba5b6"><td id="AEBq" class=""><strong>Prepayment Penalty</strong></td><td id=";wgB" class="">None for Construction Loan / Yield Maintenance for Permanent Loan</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-81bc-b57e-f45c6e32d0c6"><td id="AEBq" class=""><strong>Risk / Impact Rating</strong></td><td id=";wgB" class="">[Redacted Number] / [Redacted Number]</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-815b-af08-d93d2822d240"><td id="AEBq" class=""><strong>EBBC Eligibility</strong></td><td id=";wgB" class="">Not Eligible</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-8102-a8d7-d81399ca9271"><td id="AEBq" class=""><strong>Policy Exception(s)</strong></td><td id=";wgB" class="">None</td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-81f2-ba84-f26ca3b887a8"><td id="AEBq" class=""><strong>Approvals</strong></td><td id=";wgB" class=""></td><td id="vP=J" class=""><strong>Action</strong></td><td id="bCeY" class=""><strong>Date</strong></td></tr><tr id="11cb7e8c-1da9-817b-ac7a-cf7add96d6c7"><td id="AEBq" class="">[Redacted Name] &amp; [Redacted Name]</td><td id=";wgB" class=""></td><td id="vP=J" class="">Recommend</td><td id="bCeY" class="">[Redacted Date]</td></tr><tr id="11cb7e8c-1da9-819f-a726-ec1a215ea72e"><td id="AEBq" class=""><span style="border-bottom:0.05em solid">[Redacted Name]</span></td><td id=";wgB" class=""></td><td id="vP=J" class="">Concur</td><td id="bCeY" class="">[Redacted Date]</td></tr><tr id="11cb7e8c-1da9-81df-8f4b-dd1d730f2f10"><td id="AEBq" class=""><span style="border-bottom:0.05em solid">[Redacted Company] Loan Committee</span>[Redacted Name] (Chair), [Redacted Name], [Redacted Name], [Redacted Name]</td><td id=";wgB" class=""></td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr><tr id="11cb7e8c-1da9-812c-b68c-fc652c35f860"><td id="AEBq" class=""><span style="border-bottom:0.05em solid">[Redacted Company] Loan Committee</span>[Redacted Name] (Chair), [Redacted Name], [Redacted Name], [Redacted Name] ([Redacted Company]), [Redacted Name] ([Redacted Company])</td><td id=";wgB" class=""></td><td id="vP=J" class=""></td><td id="bCeY" class=""></td></tr></tbody></table><h1 id="11cb7e8c-1da9-81eb-9fe8-c19831a45f9a" class=""><strong>Executive Summary</strong></h1><h2 id="11cb7e8c-1da9-81b9-9f3d-defbcb18f950" class=""><strong>Summary Background</strong></h2><p id="11cb7e8c-1da9-81e6-8eb3-e9083a1c64f6" class="">[Redacted Project Name] is a to-be-constructed 9% Low-Income Housing Tax Credit (LIHTC) project for residents aged 55 and older, located in [Redacted Location]. The development will provide [Redacted Number] rent- and income-restricted units, with [Redacted Number] units at 30% AMI, [Redacted Number] units at 50% AMI, and [Redacted Number] units at 60% AMI, resulting in a blended AMI restriction of [Redacted Percentage]. The complex will feature various amenities, including a single-story clubhouse, secured entry gates, a pavilion with BBQ and picnic areas for events, and carports. The clubhouse will house a business center, kitchen, leasing offices, fitness center, and restrooms.</p><p id="11cb7e8c-1da9-8193-a64e-e00ce7ae888d" class="">[Redacted Company] (&quot;[Redacted Company]&quot;), is 100% owned by [Redacted Name], will serve as the developer for this project. [Redacted Name] previously, was a 50% partner alongside his father ([Redacted Name]) at [Redacted Company] (&quot;[Redacted Company]&quot;) before starting [Redacted Company] to perform his own projects. [Redacted Name], established [Redacted Company] in [Redacted Year] and has extensive expertise in finance, development, construction, and asset management of both affordable and market-rate rental housing (bio detailed in Appendix [Redacted]). Between [Redacted Company] and [Redacted Company], [Redacted Name] has been responsible for construction and management of over [Redacted Number] multifamily units with aggregate costs exceed [Redacted Amount].</p><p id="11cb7e8c-1da9-81f1-b42a-d5343f514c04" class="">The total project cost is estimated at [Redacted Amount], with [Redacted Amount] in hard costs, [Redacted Amount] of soft costs, and [Redacted Amount] toward the prepaid ground lease. Permanent financing is projected at [Redacted Amount]. The project has been allocated a total of [Redacted Amount] in Federal LIHTC. [Redacted Company] is providing LIHTC Equity of [Redacted Amount] at a price of [Redacted Amount]. The equity contributions from [Redacted Company] will be disbursed at four milestones: [Redacted Amount] at the closing of the construction financing, [Redacted Amount] at construction completion, [Redacted Amount] at property stabilization, and [Redacted Amount] upon receipt of 8609&#x27;s.</p><p id="11cb7e8c-1da9-81de-abb7-eb36bba3bb57" class="">[Redacted Company] (&quot;[Redacted Company]&quot;) has already closed the loan in [Redacted Month] and is willing to sell us a portion of the loan. [Redacted Company] is working to secure a syndication partner prior to committing to [Redacted Company]. Most of the analysis is based on [Redacted Company] credit underwriting prior to loan closing. Since the loan is already closed, [Redacted Company] does not have the ability to materially change the loan terms.</p><p id="11cb7e8c-1da9-81e1-a1db-c7f74f452d19" class="">As background, [Redacted Company] has financed over [Redacted Amount] in LIHTC deals, although this is their first transaction with this particular developer. [Redacted Company] is a certified Community Development Financial Institution (CDFI) based in [Redacted Location], with which [Redacted Company] has completed three previous transactions: (i) a deal with [Redacted Company] (&quot;[Redacted Company]&quot;) in [Redacted Location] ([Redacted Year]), (ii) an NMTC small business loan fund ([Redacted Year]), and (iii) [Redacted Project Name] in [Redacted Location] ([Redacted Year]) which is also a LIHTC project. [Redacted Company] has identified [Redacted Company] (&quot;[Redacted Company]&quot;) as our sub-participant and they have substantially pre-underwritten the loan since they have an existing relationship with the Sponsor, which they report to be positive in all respects. [Redacted Company] is a MDI and a CDFI.</p><p id="11cb7e8c-1da9-8122-8e59-f48cee7bfe10" class="">This lending supports a long-time LIHTC developer active in the [Redacted Location] market and aligns with [Redacted Company]&#x27;s goal to build a housing portfolio.</p><h2 id="11cb7e8c-1da9-814d-9861-e3dc257dc2c9" class=""><strong>Financing Request</strong></h2><p id="11cb7e8c-1da9-81fb-a7b2-f75308e8570c" class="">[Redacted Company] requests approval to participate up to [Redacted Amount] in a [Redacted Amount] construction loan and an option to buy up to [Redacted Amount] in a [Redacted Amount] permanent loan (subject to short-form underwriting demonstrating no material adverse change from this this underwriting). Any participation would also be subject availability of long-term funds. Both loans have already been originated by [Redacted Company] (the permanent loan &quot;dry closed&quot; simultaneously with the construction loan closing). [Redacted Company] would hold [Redacted Amount] of the construction loan and the balance of [Redacted Amount] would be sub-participated to [Redacted Company].</p><p id="11cb7e8c-1da9-81f8-914e-c1002f101a82" class="">The construction loan proceeds will be used to finance the Project&#x27;s development and lease-up prior to permanent refinance. Borrower will be eligible for permanent refinancing once the Project achieves [Redacted Number] days of operations at a [Redacted Percentage]+ occupancy rate and a [Redacted Number]x minimum DSCR (on senior portion of debt only). The construction loan will be retired by a combination of LITHC equity and permanent debt.</p><h2 id="11cb7e8c-1da9-81b4-98e3-e25f3036794c" class=""><strong>Risk and Mitigants</strong></h2><ol type="1" id="11cb7e8c-1da9-81fb-9ab8-f4294400920f" class="numbered-list" start="1"><li>Construction Risk: The timely repayment of the Construction Loan is contingent upon successful construction completion, payments from [Redacted Company] for the tax credits, and subsequent permanent conversion of the project. Any delays, cost overruns, or other events that adversely impact construction progress may affect the project&#x27;s ability to obtain necessary capital resources for repayment. In the event that the project exceeds its budget and contingency, additional capital may need to be sourced. In addition, the failure of the developer to complete the project would jeopardize the LIHTC equity capital contributions assigned for collateral.Mitigants:<ul id="11cb7e8c-1da9-81f9-8303-f6a33d3c82da" class="bulleted-list"><li style="list-style-type:disc">The developer, [Redacted Name], has a strong track record both as a partner in [Redacted Company] and on his own at [Redacted Company], constructing and managing thousands of LIHTC units in [Redacted Location].</li></ul><ul id="11cb7e8c-1da9-81d7-a8a9-decfcad7ee37" class="bulleted-list"><li style="list-style-type:disc">The guarantor financial capacity also provides a mitigating factor. [Redacted Name] (&quot;Personal Guarantor&quot;) and [Redacted Company] (&quot;Corporate Guarantor&quot;) demonstrate a combined [Redacted Amount] net worth ([Redacted Company]&#x27;s net assets were excluded in this calculation since it is 100% owned by [Redacted Name]), with a collective liquidity of [Redacted Amount].</li></ul><ul id="11cb7e8c-1da9-81a9-9422-d16cb3dca8a6" class="bulleted-list"><li style="list-style-type:disc">The developer&#x27;s capital stack includes a deferred developer fee of [Redacted Amount], [Redacted Percentage] of the [Redacted Amount] total.</li></ul><ul id="11cb7e8c-1da9-81f2-bfe9-ff1a1b234963" class="bulleted-list"><li style="list-style-type:disc">Note that while the construction loan represents [Redacted Percentage] of the project&#x27;s construction costs the injection of the remaining LIHTC equity injections will occur following completion, which will drastically reduce the outstanding debt. It is also noteworthy that there is no material cash equity from the developer. This is typical in a LIHTC transaction, where the developer owns [Redacted Percentage] or less of the Borrower and the tax credit investor (in this case, [Redacted Company]) is the [Redacted Percentage] owner. Significant cash equity from the developer would alter the ownership structure and reduce the tax credits available to the investor. The ownership structure and Sources and Uses are detailed in the respective appendices.</li></ul></li></ol><ol type="1" id="11cb7e8c-1da9-81f2-a8ea-e7c413ad47e5" class="numbered-list" start="2"><li>Operation Risk: The project&#x27;s sole source of revenue will be rental income.Mitigants:<ul id="11cb7e8c-1da9-81dd-bcf9-e9e154d01a8c" class="bulleted-list"><li style="list-style-type:disc">The rental market in the primary market area (&quot;PMA&quot;), defined as the [Redacted Location] metro area, is favorable. According to the market analysis from [Redacted Company], the PMA has seen steady growth in population over the last [Redacted Number] years, with the largest growth being [Redacted Number]+ projected for the next [Redacted Number] years. This will be only the [Redacted Number] [Redacted Number]+ project within the MSA.</li></ul><ul id="11cb7e8c-1da9-8117-ba79-f2038eb9bbb1" class="bulleted-list"><li style="list-style-type:disc">According to the Market Study, [Redacted Location] sees very high occupancy rates amount LIHTC projects ([Redacted Percentage] to [Redacted Percentage]) and even higher among age-restricted (all surveyed are at/near [Redacted Percentage]) which also report a [Redacted Number]-year waitlist.</li></ul><ul id="11cb7e8c-1da9-818c-afae-d5688446ae40" class="bulleted-list"><li style="list-style-type:disc">The LIHTC program as a whole demonstrates strength, with a program-wide delinquency rate of [Redacted Percentage] over the last [Redacted Number] years.</li></ul><ul id="11cb7e8c-1da9-81bb-ab9f-ee7d7bf362c3" class="bulleted-list"><li style="list-style-type:disc">Additionally, replacement and operating reserves totaling [Redacted Amount] are to be funded at conversion, comprising [Redacted Amount] in replacement reserves and [Redacted Amount] in operating reserves. These reserves provide a financial buffer against potential operational challenges.</li></ul><ul id="11cb7e8c-1da9-8136-9345-c8daa7fdb40e" class="bulleted-list"><li style="list-style-type:disc">Project projections show a Year 1 DSCR of [Redacted Number]x ([Redacted Number]x global DSCR), and a DSCR of [Redacted Number]x at maturity, assuming a conservative [Redacted Percentage] vacancy rate.</li></ul></li></ol><h2 id="11cb7e8c-1da9-8108-8a82-ec73a41f7a31" class=""><strong>Sources of Repayment</strong></h2><ol type="1" id="11cb7e8c-1da9-813c-b0f8-f7552632cb17" class="numbered-list" start="1"><li>Construction<ul id="11cb7e8c-1da9-8194-b280-ebc0d6915d86" class="bulleted-list"><li style="list-style-type:disc">Primary: Take-out from permanent financing<p id="11cb7e8c-1da9-8196-811e-d87e88e96f54" class="">An equity pay-in schedule, based on the executed partnership agreement, anticipates a total of [Redacted Amount] equity contribution. This contribution will be distributed across several project milestones. At the closing of the project construction loan, [Redacted Percentage] of the equity will be paid in. Upon completion of construction, an additional [Redacted Percentage] will be contributed. The majority of the equity, [Redacted Percentage], will be paid in at the stabilization of the property&#x27;s occupancy. The final [Redacted Percentage] will be contributed upon receipt of the 8609&#x27;s.</p><p id="11cb7e8c-1da9-81e2-af2b-fd1f495f0f3e" class="">The construction loan will undergo partial repayment through these equity contributions prior to permanent refinance. Additionally, the funding of the permanent loan will contribute to the payoff. The permanent loan closing is contingent upon the project achieving a [Redacted Number]x Debt Service Coverage Ratio (DSCR) sustained for a period of [Redacted Number] days. (Note: the terms of the [Redacted Company] Debt will not impact the ability of the permanent refinance to fund or LIHTC equity pay-in. The [Redacted Company] debt has &quot;soft pay&quot; provisions in the scenario operations are insufficient to make payments on the subordinate debt so that senior debt is prioritized.)</p></li></ul><ul id="11cb7e8c-1da9-81d9-972a-e03f15fbd626" class="bulleted-list"><li style="list-style-type:disc">Secondary: Liquidation of Collateral<p id="11cb7e8c-1da9-81e8-8d5a-e2cc90e0665b" class="">The collateral to-be-constructed is a [Redacted Number]-unit 55+ residential LIHTC project with the assignment of capital contributions committed via LP agreement between [Redacted Company] and [Redacted Company] in forming the LP entity (See Appendix [Redacted]). Capital contributions total [Redacted Amount]. In addition to capital contributions, there is a 1st leasehold deed of trust on the property valued at [Redacted Amount] and an assignment of developer fees posited for collateral, for a total collateral value of [Redacted Amount], for an LTV of [Redacted Percentage].</p></li></ul><ul id="11cb7e8c-1da9-81c7-baee-cb92d8185943" class="bulleted-list"><li style="list-style-type:disc">Tertiary: Guarantor Wherewithal<p id="11cb7e8c-1da9-81ae-a7f1-eb2e2366dce5" class="">The Guarantor reports net worth exceeding the loan amount (Appendix [Redacted]). In a scenario where collateral liquidation does not satisfy the Loan in full, his assets could be liquidated to repay the loan in full.</p></li></ul></li></ol><ol type="1" id="11cb7e8c-1da9-8181-b401-f92143f11487" class="numbered-list" start="2"><li>Permanent<ul id="11cb7e8c-1da9-8163-9810-fb6f1da4c745" class="bulleted-list"><li style="list-style-type:disc">Primary: Rents from property<p id="11cb7e8c-1da9-8112-8baf-f8d4793b882e" class="">The project demonstrates a Year 1 Debt Service Coverage Ratio (DSCR) of [Redacted Number]x ([Redacted Number]x with subordinated debt), indicating a strong initial ability to meet debt obligations. By the 3rd year of operations, the project is expected to achieve a [Redacted Number] DSCR including subordinate debt. These DSCR assume a [Redacted Percentage] vacancy rate, which is much higher than market according to the Market Study.</p></li></ul><ul id="11cb7e8c-1da9-8102-b326-e840053f336d" class="bulleted-list"><li style="list-style-type:disc">Secondary: Refinance<p id="11cb7e8c-1da9-81ad-ab17-e86d34ccc47f" class="">Permanent financing is structured to be [Redacted Amount] at an interest rate of [Redacted Percentage], a term of [Redacted Number] years, and at a [Redacted Number]-year amortization. With these terms, there will need to be a refinancing at the term of the permanent loan, currently estimated to be [Redacted Amount]. By Year [Redacted Number], the proposed property is projected to have a DSCR coverage of [Redacted Number]x, which is within expectations for acquiring bank debt.</p></li></ul><ul id="11cb7e8c-1da9-81be-8277-fa8dda3aa56c" class="bulleted-list"><li style="list-style-type:disc">Tertiary: Liquidation of Collateral<p id="11cb7e8c-1da9-81ed-9f43-dbd92b0b3586" class="">Permanent financing for the project will be secured through a first leasehold deed of trust, assignment of rents, and assignment of deferred developer fee. The property acquisition is structured as a ground lease arrangement, with a [Redacted Number]-year term priced at [Redacted Amount] annually. This structure is designed to optimize property tax efficiency for the development. The loan-to-value ratio (LTV) of [Redacted Percentage] on the permanent loan.</p></li></ul></li></ol><h2 id="11cb7e8c-1da9-8191-9572-d578787e0098" class=""><strong>Collateral/LTV</strong></h2><p id="11cb7e8c-1da9-8138-beff-c128562f78af" class="">An appraisal conducted by [Redacted Company] on [Redacted Date], valued the leasehold interest of the property at [Redacted Amount], assuming stabilized occupancy and restricted rents.</p><p id="11cb7e8c-1da9-81d5-9a31-ed1c9bdaf1cd" class="">The construction loan collateral package includes several components: Assignment of Capital Contributions, Assignment of Project Documents, Assignment of General Partner/Managing Member interest, Assignment of Developer fee, other tax credit related collateral as needed, a 1st Leasehold Deed of Trust, and Assignment of Rents on the LIHTC construction project. The Loan to Value (LTV) ratio for the construction loan is calculated at [Redacted Percentage], based on a total collateral value of [Redacted Amount] against a construction loan amount of [Redacted Amount].</p><p id="11cb7e8c-1da9-8127-aa1f-c34efca81e4d" class="">[Table redacted]</p><p id="11cb7e8c-1da9-81d5-bebc-d7bce0d6e8e9" class="">For the permanent loan, the collateral consists of a 1st Leasehold Deed of Trust, Assignment of Rents, and Assignment of Deferred Developer Fee. The LTV for the permanent loan is more conservative at [Redacted Percentage], calculated using a total collateral value of [Redacted Amount] against a loan amount of [Redacted Amount].</p><p id="11cb7e8c-1da9-8172-9a4b-e4ba2e6bd21f" class="">[Table redacted]</p><p id="11cb7e8c-1da9-81ad-b7c5-d348d3601743" class="">A notable feature of this project is the ground lease arrangement, which has been structured with a [Redacted Number]-year term at an annual cost of [Redacted Amount]. The deed is held by the [Redacted Organization], who will also have a GP interest in the Borrower. This ground lease structure was required in order for the Project to receive a full property tax abatement, which improves the long-term financial sustainability.</p><h2 id="11cb7e8c-1da9-818a-8d6e-e2f4f9c45b3b" class=""><strong>Rationale for Approval</strong></h2><ol type="1" id="11cb7e8c-1da9-81fa-b7f1-ef5d341722a7" class="numbered-list" start="1"><li>Solid and experienced Sponsor:<ol type="a" id="11cb7e8c-1da9-817a-8ad0-f728bcdce3dd" class="numbered-list" start="1"><li>Strong management team with successful operating history;</li></ol><ol type="a" id="11cb7e8c-1da9-81e0-b657-fd9eff4c93a2" class="numbered-list" start="2"><li>Mission alignment with the sponsor&#x27;s focus on creating affordable and mixed-income housing opportunities;</li></ol><ol type="a" id="11cb7e8c-1da9-81ef-9ac3-e66a86a6561a" class="numbered-list" start="3"><li>High-quality and experienced sponsorship with significant development expertise in the [Redacted Location] real estate market;</li></ol><ol type="a" id="11cb7e8c-1da9-81a0-9612-ce5c2ed553b7" class="numbered-list" start="4"><li>Guarantee for the Construction Loan with a combined net worth of [Redacted Amount] and liquid assets of [Redacted Amount].</li></ol></li></ol><ol type="1" id="11cb7e8c-1da9-81f1-9396-c2e588becde9" class="numbered-list" start="2"><li>Strong operating projections and strong financials of the Guarantor:<ol type="a" id="11cb7e8c-1da9-813f-a0d7-fd2baa51d876" class="numbered-list" start="1"><li>Solid operating performance projections with expense assumptions that are more conservative than the appraiser&#x27;s conclusions;</li></ol><ol type="a" id="11cb7e8c-1da9-81d3-98a4-c1bbcf24b60e" class="numbered-list" start="2"><li>Market study shows that market rents are reasonable for the PMA;</li></ol><ol type="a" id="11cb7e8c-1da9-81fb-a9c5-dbd24a41b91d" class="numbered-list" start="3"><li>The PMA demonstrates a need for additional units, including affordable units; and</li></ol><ol type="a" id="11cb7e8c-1da9-81d4-847f-c276dca8e5eb" class="numbered-list" start="4"><li>Projected global DSCR of [Redacted Number]x ([Redacted Number]x on subject loan) at stabilization, which rises continually throughout the loan term.</li></ol></li></ol><ol type="1" id="11cb7e8c-1da9-81e7-9bff-c3f748f61b67" class="numbered-list" start="3"><li>Acceptable LTVs of [Redacted Percentage] during construction (inclusive of the tax credit proceeds) and [Redacted Percentage] following stabilization.</li></ol><ol type="1" id="11cb7e8c-1da9-817d-a7b4-c119247afdaf" class="numbered-list" start="4"><li>Strong community impact through providing [Redacted Number] units of affordable housing, all of which will be set aside for households earning at or below [Redacted Percentage] AMI.</li></ol><h2 id="11cb7e8c-1da9-81df-97fb-e2e59d3d7593" class=""><strong>Covenants, Compliance, or Conditions for Closing – as determined by Lead Lender to include:</strong></h2><ol type="1" id="11cb7e8c-1da9-8125-a868-f1f9c4cff312" class="numbered-list" start="1"><li>Annual Financial Statement for [Redacted Entity Type] within [Redacted Number] days of FYE</li></ol><ol type="1" id="11cb7e8c-1da9-816f-bdbe-fb785320aede" class="numbered-list" start="2"><li>Tax Returns for the [Redacted Entity Types] within [Redacted Number] days of filing</li></ol><ol type="1" id="11cb7e8c-1da9-81a0-8075-d18e922cbf72" class="numbered-list" start="3"><li>Quarterly operating statements and rent rolls within [Redacted Number] days of each FQE</li></ol><ol type="1" id="11cb7e8c-1da9-8157-a647-c2644c2276d0" class="numbered-list" start="4"><li>During the permanent loan, the property shall maintain a minimum DSCR on the senior debt of no less than [Redacted Number]x</li></ol><h2 id="11cb7e8c-1da9-819e-bba8-e200f1604dee" class=""><strong>Rating Discussion</strong></h2><p id="11cb7e8c-1da9-818f-83a9-e8c0f5b41c19" class="">Risk Rating of [Redacted Number] for &quot;[Redacted Rating]&quot; (Appendix [Redacted]) based on the following metrics:</p><ul id="11cb7e8c-1da9-8160-ac65-e47724148f8f" class="bulleted-list"><li style="list-style-type:disc">Sponsor has more than [Redacted Number] years of experience</li></ul><ul id="11cb7e8c-1da9-81dc-96c4-cc436a3a1d64" class="bulleted-list"><li style="list-style-type:disc">General contractor has more than [Redacted Number] years of experience</li></ul><ul id="11cb7e8c-1da9-819e-9424-c73000025cfd" class="bulleted-list"><li style="list-style-type:disc">LTV is below [Redacted Percentage]</li></ul><ul id="11cb7e8c-1da9-8104-8020-f8b2c2daca40" class="bulleted-list"><li style="list-style-type:disc">Debt service coverage ratio is equal to or greater than [Redacted Number]:1</li></ul><p id="11cb7e8c-1da9-8139-b1a6-f5e65a5701d5" class="">Impact rating of [Redacted Number] for &quot;[Redacted Rating]&quot; based on the following metrics:</p><ul id="11cb7e8c-1da9-816c-9994-e8858b3ca792" class="bulleted-list"><li style="list-style-type:disc">The project creates [Redacted Number] affordable rental units</li></ul><ul id="11cb7e8c-1da9-81c4-abf3-f14c2831c244" class="bulleted-list"><li style="list-style-type:disc">Creates [Redacted Number] construction jobs based on the federal Bureau of Economic Analysis determination that [Redacted Number] construction FTEs are created for every [Redacted Amount] in hard construction costs.</li></ul><h1 id="11cb7e8c-1da9-8158-8968-f0db8e201e74" class=""><strong>In-Depth Analysis</strong></h1><h2 id="11cb7e8c-1da9-8187-9baf-f8880ad09fe7" class=""><strong>Location and Market</strong></h2><p id="11cb7e8c-1da9-8138-80c2-ddc8c30df7ef" class="">[Redacted Location] is situated along the [Redacted Geographic Feature] and the [Redacted Location] border. Its location makes it a key point of entry for immigration, drawing political and media attention, especially during debates over border security. This can create challenges like heightened enforcement, delays in cross-border transport, and reputational risks for businesses operating in the area. However, [Redacted Location] is also a major trade hub, with the busiest inland port facilitating significant commerce between the [Redacted Countries]. Per the appraisal, the region benefits from robust trade under the [Redacted Trade Agreement], driving growth in logistics, warehousing, and transportation industries. This consistent economic activity bolsters local businesses, making [Redacted Location] a vital part of [Redacted Region] trade infrastructure. The strong commercial prospects and steady demand for industrial real estate help offset potential political and security risks, making the region attractive for investment despite its complex geopolitical environment.</p><p id="11cb7e8c-1da9-8167-b97f-d97289d2d9cc" class="">In addition, momentum in the EV industry will have particular importance for the [Redacted Location] economy, due to [Redacted Company] building &quot;gigafactories&quot; in [Redacted Locations]. Also, [Redacted Company] has expanded its presence in [Redacted Location], and several of its suppliers have opened up operations along [Redacted Highway] between [Redacted Locations]. This is cause for cautious optimism of future overperformance in the [Redacted Location] market.</p><p id="11cb7e8c-1da9-81a5-bfd6-fb1e70d82806" class=""><strong>[Maps redacted]</strong></p><p id="11cb7e8c-1da9-81ba-8a09-fcefc5d8195f" class=""><strong>Primary Market Area</strong></p><p id="11cb7e8c-1da9-818a-9407-f95cbea9b5f0" class=""><strong>[PMA map redacted]</strong></p><p id="11cb7e8c-1da9-8118-8dc7-d9854a1e1070" class=""><strong>Population</strong></p><p id="11cb7e8c-1da9-8112-b4cb-cdf5a7142501" class="">Between [Redacted Year] and [Redacted Year], the PMA experienced a population growth of [Redacted Number] to [Redacted Number] at a rate of [Redacted Percentage] per year, surpassing the [Redacted Location] MSA&#x27;s annual growth rate of [Redacted Percentage] (from [Redacted Number] to [Redacted Number]). Projections from [Redacted Company] forecast a continued growth from [Redacted Number] to [Redacted Number] at a rate of [Redacted Percentage] per year for the PMA, slightly outpacing the projected MSA growth. This trend is expected to result in an estimated PMA population of [Redacted Number] residents by [Redacted Year]. Notably, the [Redacted Age Group] age cohorts demonstrated the highest percentage increase from [Redacted Year] to [Redacted Year]. Looking ahead to [Redacted Year], this age group is anticipated to maintain the fastest growth rate, with the [Redacted Age Group] demographic growing at [Redacted Percentage], significantly higher than the overall population growth rate of [Redacted Percentage].</p><p id="11cb7e8c-1da9-8189-85ab-d5fe178f7c7c" class=""><strong>[Table redacted]</strong></p><p id="11cb7e8c-1da9-8127-80bd-e22bd30b5026" class=""><strong>[Table redacted]</strong></p><p id="11cb7e8c-1da9-8159-aee5-ce9231f70267" class=""><strong>Income</strong></p><p id="11cb7e8c-1da9-81d0-8364-f96383c399a6" class="">The U.S. Department of Housing and Urban Development (HUD) estimates the [Redacted Year] median family income (MFI) for the [Redacted Location] MSA at [Redacted Amount] (see chart below). The Project proposes rents that are restricted to [Redacted Percentage], [Redacted Percentage], and [Redacted Percentage] AMI (AMI and MFI are synonymous). These means as AMI and MFI grow, the maximum rents a LIHTC property can charge grow proportionally. According to the Market Study, [Redacted Year] to [Redacted Year], the median family income grew at an average rate of [Redacted Percentage] per year. Recent years have seen fluctuations in median family income, with a [Redacted Percentage] increase in [Redacted Year], followed by a [Redacted Percentage] decrease in [Redacted Year], and an [Redacted Percentage] increase in [Redacted Year].</p><p id="11cb7e8c-1da9-81ea-ac19-f80630100415" class="">[Chart redacted]</p><p id="11cb7e8c-1da9-8109-9740-e413a7797df7" class="">In addition, the distribution of income of the [Redacted Age Group] renter demographic of the PMA (see table below) shows a higher distribution of [Redacted Amount] and lower income for [Redacted Number]- and [Redacted Number]-person households, demonstrating ample supply for the proposed project.</p><p id="11cb7e8c-1da9-81bc-a606-e3037cf614e1" class=""><strong>[Table redacted]</strong></p><p id="11cb7e8c-1da9-810d-8e93-ed0d38ed9f1f" class=""><strong>Absorption</strong></p><p id="11cb7e8c-1da9-812a-94d6-c579c440ee5d" class="">The subject property is projected to fill [Redacted Number] units per month, reaching stabilized occupancy within [Redacted Number] months without requiring concessions during the lease-up period. [Redacted Company] projections for the PMA indicate an annual addition of [Redacted Number] new renters, including [Redacted Number] new senior ([Redacted Age Group]) renters. Existing properties in the area demonstrate high demand, with a surveyed deeply subsidized property reporting [Redacted Percentage] occupancy and maintaining a waitlist. Also, a senior Low Income Housing Tax Credit (LIHTC) development outside the PMA is fully occupied with a [Redacted Time Period] waiting list. Notably, the subject property will be the sole senior LIHTC project within the PMA, and only the second such property in the entire [Redacted Location] MSA.</p><p id="11cb7e8c-1da9-813f-8521-ed1081139757" class=""><strong>Affordable Housing Market</strong></p><p id="11cb7e8c-1da9-816d-8ad1-de1a3f724943" class="">Within a [Redacted Distance] radius of the subject property, there are [Redacted Number] comparable affordable rent-restricted properties. The current vacancy rate for these properties stands at [Redacted Percentage], representing a [Redacted Percentage] increase from the prior period. Among these, two fully affordable properties (with no market-rate units) report varying vacancy rates: one at [Redacted Percentage] and the other at [Redacted Percentage].</p><p id="11cb7e8c-1da9-8156-ac20-ca013acf0477" class=""><strong>[Chart redacted]</strong></p><h2 id="11cb7e8c-1da9-8179-9a2e-e9f02908ea93" class=""><strong>Sponsor, Personal Guarantors, General Contractor, and Construction Monitor Background</strong></h2><p id="11cb7e8c-1da9-81c7-b618-eb5ada82f66b" class=""><strong>Guarantors: [Redacted Name] (&quot;Personal Guarantor), [Redacted Company] (&quot;Corporate Guarantor&quot;)</strong></p><p id="11cb7e8c-1da9-819e-b26d-e3e2beb0eba9" class="">The project involves two guarantors. [Redacted Name] and [Redacted Company]. In his role as partner and Vice President of [Redacted Company], he leads strategic planning, corporate finance, development, risk management, capital markets, asset management, and operations. Throughout his career, [Redacted Name] has been involved in over [Redacted Number] multifamily units, with total investment oversight exceeding [Redacted Amount].</p><p id="11cb7e8c-1da9-81c9-a0c2-dd0d82d3429a" class="">The Corporate Guarantor is [Redacted Company], a company established by [Redacted Name]. This entity, wholly owned by [Redacted Name] and his trust, focuses on developing affordable projects.</p><p id="11cb7e8c-1da9-81e7-aa1a-c40261b51ef0" class=""><strong>Tax Credit Syndicator</strong></p><p id="11cb7e8c-1da9-8114-824d-ffd263d44d18" class="">[Redacted Company] serves as the syndicator for the project. Their Community Investments division specializes in various tax credits, including Low Income Housing and Workforce/Impact Housing. As of [Redacted Date], [Redacted Company] Community Investments boasts a team of over [Redacted Number] professionals, has raised more than [Redacted Amount] in equity, manages [Redacted Number] active funds, works with [Redacted Number] institutional investors, and oversees [Redacted Number] affordable housing tax credit assets.</p><p id="11cb7e8c-1da9-8185-a9ff-d800eca7f0de" class=""><strong>Property Management</strong></p><p id="11cb7e8c-1da9-8192-a886-da8fb2446dd3" class="">[Redacted Company] has been appointed as the property management firm for this project. Based in [Redacted Location], [Redacted Company] specializes in multifamily and affordable housing, including Section 8, LIHTC, HUD-financed, and senior housing communities. The company&#x27;s principals have been active in the real estate industry since the [Redacted Time Period]. [Redacted Company] holds the distinction of being the [Redacted Ranking] largest property management provider for affordable housing nationwide and the largest in [Redacted Location]. With additional offices in [Redacted Locations], the company employs over [Redacted Number] individuals throughout [Redacted Location].</p><p id="11cb7e8c-1da9-81e2-93e1-f56e86c6b6be" class=""><strong>General Contractor</strong></p><p id="11cb7e8c-1da9-815c-88a8-cf6e97b91965" class="">[Redacted Company] has been selected as the General Contractor for this project. As a multi-family construction, development, and property management company, [Redacted Company] is headquartered in [Redacted Location] with additional offices in [Redacted Locations]. Since [Redacted Year], the company has contracted and developed over [Redacted Amount] in residential developments, encompassing more than [Redacted Number] units across [Redacted Number] developments throughout [Redacted Locations].</p><p id="11cb7e8c-1da9-818d-9e26-d701c758c4fd" class=""><strong>Architect</strong></p><p id="11cb7e8c-1da9-818a-a982-ce3fe481e952" class="">[Redacted Company] (NDA) will serve as the project&#x27;s architect. NDA specializes in single and multi-family residential architecture and is a member of [Redacted Organization]&#x27;s Green Builder program. The firm has demonstrated its commitment to sustainable building practices, having been awarded [Redacted Award] by [Redacted Organization] for their first design-build project.</p><p id="11cb7e8c-1da9-819f-b1a5-da09ad36bad5" class=""><strong>Supporting</strong> <strong>Development Consultant</strong></p><p id="11cb7e8c-1da9-816e-86ee-d5498214e9d5" class="">[Redacted Company] (&quot;Madhouse&quot;) serves as the fee developer for this project, which is [Redacted Percentage] owned by [Redacted Name] and [Redacted Percentage] [Redacted Name], his father. Established in [Redacted Year], [Redacted Company] brings expertise in finance, development, construction, and asset management of affordable and market-rate rental housing. The company has been recognized in the Top [Redacted Number] Affordable Housing Developers by [Redacted Publication] multiple times. Since its inception, [Redacted Company] has developed over [Redacted Number] units of affordable housing, with total investments surpassing [Redacted Amount]. While primarily focused on [Redacted Location], the company has also undertaken projects in [Redacted Locations].</p><p id="11cb7e8c-1da9-81fd-8f27-c89a95092245" class=""><strong>Construction Monitor</strong></p><p id="11cb7e8c-1da9-81b2-9bed-ec43b82c2727" class="">[Redacted Company] was engaged to perform a plan and cost review and draw inspection reports for the project. [Redacted Company] is a preferred vendor of [Redacted Companies]. NCIF has not worked with [Redacted Company] in the past, but the plan and cost review appears to be thorough and professional.</p><p id="11cb7e8c-1da9-815b-9f05-f2daf86bfa4f" class=""><strong>Appraiser</strong></p><p id="11cb7e8c-1da9-8160-a9c8-ed91b9e12a1e" class="">The appraisal was performed by [Redacted Name], President and principal of [Redacted Company], based in [Redacted Location]. [Redacted Name] started the appraisal company nearly [Redacted Number] years ago and provides commercial real estate valuations in [Redacted Locations]. In addition to regional and national banks, [Redacted Name] is an approved appraiser for [Redacted Organizations]. Prior to starting [Redacted Company], [Redacted Name] was employed for [Redacted Number] years as an MAI appraiser for two [Redacted Location]-based appraisal firms.</p><h2 id="11cb7e8c-1da9-81d4-a5ca-e362e8f8ef89" class="">Project Description</h2><p id="11cb7e8c-1da9-81e9-b223-ca61bdde310d" class="">[Redacted Project Name] is an [Redacted Number]-unit [Redacted Percentage] Low-Income Housing Tax Credit (LIHTC) project located in [Redacted Location], designed for residents aged [Redacted Age] and older. The project features a diverse mix of affordable housing units with varying Area Median Income (AMI) restrictions. [Redacted Number] units are designated for households at [Redacted Percentage] AMI, [Redacted Number] units for [Redacted Percentage] AMI, and [Redacted Number] units for [Redacted Percentage] AMI. The unit mix consists of [Redacted Number] [Redacted Unit Type] units and [Redacted Number] [Redacted Unit Type] units.</p><p id="11cb7e8c-1da9-81de-a6c0-ccaa8b68d3f0" class="">The complex will include a range of common amenities to enhance residents&#x27; quality of life. A single-story clubhouse serves as the centerpiece, housing a business center, kitchen, leasing offices, fitness center, and restrooms. Additional community features include secured entry gates, a pavilion, carports, and a BBQ/picnic area. Each unit is equipped with a complete appliance package and washer/dryer connections, providing convenience for residents.</p><p id="11cb7e8c-1da9-81f9-99c1-d2cff93c0874" class="">The following are the drawings for the complex:</p><p id="11cb7e8c-1da9-814f-8c9b-d02639ab64e6" class="">[Plans &amp; Specs redacted]</p><h2 id="11cb7e8c-1da9-8175-b686-e94641da6266" class="">Impact Analysis</h2><p id="11cb7e8c-1da9-8154-acdf-c7c2cbcec733" class="">The [Redacted Project Name] project is poised to deliver [Redacted Number] affordable housing units, providing crucial support to seniors aged [Redacted Age Group] and older in [Redacted Location]. This project addresses the growing demand for quality, low-cost housing in the region, particularly among low-income senior households. Beyond the provision of affordable housing, the development will also create an estimated [Redacted Number] construction jobs, offering a significant economic stimulus during the building phase.</p><p id="11cb7e8c-1da9-817f-98bb-dbca6f1ab90e" class="">Affordability and Tenant Savings: The project employs a tiered affordability structure, targeting households earning [Redacted Percentage], [Redacted Percentage], and [Redacted Percentage] of the Area Median Income (AMI). With [Redacted Number] units reserved for [Redacted Percentage] AMI, [Redacted Number] units for [Redacted Percentage] AMI, and [Redacted Number] units for [Redacted Percentage] AMI, the project ensures a diverse range of affordability options for seniors with different income levels.</p><p id="11cb7e8c-1da9-81da-a592-d93ac1d9d570" class="">The table below illustrates the significant financial savings that tenants will experience compared to market-rate alternatives:</p><ul id="11cb7e8c-1da9-8124-a065-df7ba78c09f5" class="bulleted-list"><li style="list-style-type:disc">Rent Comparison: The project&#x27;s units, which range from [Redacted Unit Type] to [Redacted Unit Type] apartments, have rents substantially lower than the market average. For example, per the [Redacted Company] market study, market rents in the area are estimated at [Redacted Amount] per unit per month ([Redacted Amount] per square foot). In contrast, tenants in the [Redacted Project Name] development will pay an average rent of [Redacted Amount] per month, resulting in substantial savings for residents.</li></ul><ul id="11cb7e8c-1da9-81cb-9245-d740332a93c2" class="bulleted-list"><li style="list-style-type:disc">Tenant Savings: On average, each tenant will save approximately [Redacted Amount] per year in housing costs. The total annual savings across the entire project are estimated at [Redacted Amount]. Over a [Redacted Time Period] period, tenants are expected to save a staggering [Redacted Amount]. These savings allow tenants, many of whom are on fixed incomes, to allocate more resources toward other critical needs such as healthcare, food, and utilities, directly enhancing their quality of life.</li></ul><ul id="11cb7e8c-1da9-81fb-b2d4-d696628bca6a" class="bulleted-list"><li style="list-style-type:disc">Wealth Building and Economic Stability: These reduced rent levels not only alleviate immediate financial pressures but also promote long-term wealth building and financial stability among low-income tenants. By paying significantly less in rent, residents can potentially accumulate savings, reduce debt, and invest in their well-being, contributing to broader economic empowerment.</li></ul><blockquote id="11cb7e8c-1da9-81ce-96fc-fe325bd6db47" class="">[Table redacted]</blockquote><p id="11cb7e8c-1da9-81a7-840f-dae78e9167c1" class="">Environmental and Social Benefits: In addition to the direct economic benefits, the project promotes environmental sustainability by incorporating energy-efficient building practices, which will lower utility costs for residents and reduce the property&#x27;s overall carbon footprint. Socially, the project fosters community engagement and active living, with features like a business center, fitness facility, and gathering spaces for residents to build connections and prevent isolation, which is particularly important for senior residents.</p><h2 id="11cb7e8c-1da9-81d0-a156-f53bd4de4524" class="">Financial Analysis</h2><p id="11cb7e8c-1da9-816e-8bb0-ed6b9eda8d72" class=""><strong>Financial Analysis of the Project</strong></p><p id="11cb7e8c-1da9-815d-a6f5-c9e5f1d0adca" class="">[Redacted Company]&#x27;s analysis shows the project&#x27;s Debt Service Coverage Ratio (DSCR) remains above [Redacted Ratio] from Year 1 through Year 15, indicating strong debt service capability. Revenue is projected to grow from [Redacted Amount] in Year 1 to [Redacted Amount] by Year 15, with a [Redacted Percentage] vacancy rate. Operating expenses start at [Redacted Amount] in Year 1, escalating [Redacted Percentage] annually. The debt service for the permanent loan is [Redacted Amount] per year, resulting in a stabilized DSCR of [Redacted Ratio], improving over time.</p><p id="11cb7e8c-1da9-81c0-b8e4-c39f9c510ed7" class=""><strong>Financial Analysis of the Corporate Guarantor</strong></p><p id="11cb7e8c-1da9-8110-a986-ed422d024c01" class="">[Redacted Company], the corporate guarantor, is an established multifamily development entity with [Redacted Amount] in assets and [Redacted Amount] in liabilities. The company&#x27;s debt-to-equity ratio is [Redacted Percentage], which is manageable in the real estate development sector. [Redacted Company]&#x27;s income has grown significantly since its inception in [Redacted Year], primarily driven by developer fees.</p><p id="11cb7e8c-1da9-819a-8532-e23895a42fe5" class=""><strong>Financial Analysis of the Personal Guarantor</strong></p><p id="11cb7e8c-1da9-81a9-a308-eddd5e98309c" class="">[Redacted Name] provides a personal guarantee for the project, offering [Redacted Percentage] completion and repayment guarantees for the Construction Loan. As of [Redacted Date], he reports a net worth of [Redacted Amount], with a debt-to-income ratio of [Redacted Percentage] and a credit score of [Redacted Number]. His contingent liabilities total [Redacted Amount], including Operating Deficit Guarantees and Construction Loans. Despite significant contingent liabilities, the [Redacted Name] track record and project staggering mitigate associated risks. Of the construction loan guarantees, only one other project is under construction as of the date of this memo, meaning the balance of the contingent liability should terminate in the near future.</p><p id="11cb7e8c-1da9-81d9-a008-daca7e0b2a08" class="">Operating proformas, balance sheets, and income statements can be found in the Appendices C,D,E and F.</p><h2 id="11cb7e8c-1da9-8161-8d7c-e7f4d3b01a5b" class="">Ground Lease and General Partnership Structure</h2><p id="11cb7e8c-1da9-81fa-8533-c89a0fd88888" class="">As is typical in a LIHTC transaction the transaction has the following entities – see Appendix A for graphical representation:</p><ol type="1" id="11cb7e8c-1da9-8130-a6a1-fed8e1c5ff35" class="numbered-list" start="1"><li>Limited Partner (&quot;LP&quot;), [Redacted Company] has [Redacted Percentage] interest</li></ol><ol type="1" id="11cb7e8c-1da9-8114-bd22-e89954e571af" class="numbered-list" start="2"><li>General Partner (&quot;GP&quot;), Special Purpose Entity (&quot;SPE&quot;) of a Public Facility Company (&quot;PFC&quot;) related to the [Redacted Organization] owns a controlling interest in the GP and ability to exercise control.</li></ol><ol type="1" id="11cb7e8c-1da9-8158-8b10-fe8599fc44c9" class="numbered-list" start="3"><li>Special Limited Partner (&quot;SLP&quot;), SPE of the developer has a &quot;Special Limited Partner&quot; interest in the GP. As detailed in a Memorandum of Understanding, (i) this structure (together with the ground lease) is required to obtain the property tax abatement under [Redacted Location] law and (ii) in recognition of the developer&#x27;s financial risk from guaranteeing the loans, the SLP has the ability to execute documents that have a financial impact on the project.</li></ol><p id="11cb7e8c-1da9-81e1-870b-ee4fae17e72c" class="">The ground lease landlord is also the PFC, who will receive [Redacted Amount] in rent annually. The [Redacted Time Period] ground lease provides a purchase option at the end of the compliance period and is transferable. It also notes the possibility of foreclosure and recognizes that, in this scenario, the lender will become the lessor under the same terms and eventually may want to sell that interest to repay the loans. The legal risk associated with this structure will be reviewed and discussed with [Redacted Company]&#x27;s legal counsel and [Redacted Company] will ensure that this structure does not create any material risk to the project prior to closing.</p><h2 id="11cb7e8c-1da9-814c-a057-f5cc57523941" class="">Low-Income Housing Tax Credits (LIHTC)</h2><p id="11cb7e8c-1da9-8172-bcf1-d232e4be37cf" class="">The Low-Income Housing Tax Credit (LIHTC) program, established in [Redacted Year], is a federal initiative designed to address the economic challenges associated with affordable housing development. By offering tax credits, the program aims to offset the reduced income potential inherent in housing projects with restricted rents. This program has become a cornerstone in the creation and preservation of affordable housing across the [Redacted Country].</p><p id="11cb7e8c-1da9-81d2-91fe-fd808208c99a" class="">The LIHTC program operates on a federal-to-state distribution model. The federal government allocates tax credits to individual states and territories, which then have the responsibility of disbursing these credits to specific projects within their jurisdictions. The competitive nature of the program, particularly for the [Redacted Percentage] tax credits, has led each state to develop its own unique system for evaluating and awarding credits to proposed projects. In [Redacted State], this process is overseen by the [Redacted Organization].</p><p id="11cb7e8c-1da9-818d-9ca0-e2ec985924f5" class="">Since its inception, the LIHTC program has facilitated the financing of over [Redacted Number] apartment units nationwide. Properties developed under this program have demonstrated strong performance metrics. In [Redacted Year], LIHTC properties reported median figures of [Redacted Percentage] physical occupancy, [Redacted Ratio] debt coverage ratio, and over [Redacted Amount] per unit per annum in net cash flow. These properties have also shown resilience during economic downturns, including the [Redacted Year] Housing Crisis and the [Redacted Year] COVID-19 pandemic, with foreclosure rates consistently remaining below [Redacted Percentage] over the past [Redacted Time Period].</p><p id="11cb7e8c-1da9-8134-a2f1-d9598cee5c6a" class="">The ownership structure of LIHTC projects is designed to optimize the utilization of tax credits. Typically, the LIHTC investor owns [Redacted Percentage] of the special purpose entity that holds the real estate, while the project sponsor retains a [Redacted Percentage] ownership stake. This arrangement allows for maximum tax credit benefits for the investor. Consequently, LIHTC projects often involve minimal cash equity contribution from the project sponsor, as significant equity injections could alter these ownership percentages and potentially diminish the tax credit value for the investor.</p><p id="11cb7e8c-1da9-8186-b09d-f7b9df3dcd70" class="">The table below describes outlines the how Tax Credit Equity is calculated for the Project.</p><p id="11cb7e8c-1da9-814f-a96c-c3969d1b0059" class="">[Table redacted]</p><p id="11cb7e8c-1da9-8188-abec-f5e15f02ef93" class="">[Redacted Company] will deploy the Tax Credit Equity according the following Equity Pay-in Schedule:</p><p id="11cb7e8c-1da9-812c-8351-f25a4ae4368f" class="">[Table redacted]</p><h2 id="11cb7e8c-1da9-819f-a196-d1c1505d757c" class="">Draw Process</h2><p id="11cb7e8c-1da9-816b-a9e3-e38c0040930d" class="">The draw process for this project will resemble that of [Redacted Project Name], another LIHTC transaction in which [Redacted Company] participated with [Redacted Company] in [Redacted Date]. The [Redacted Project Name] draw process consists of two distinct draws: an interest draw (to be made out of the interest reserve on the monthly payment dates) and a construction draw.</p><p id="11cb7e8c-1da9-814e-b51a-c4c94537e10f" class="">The developer will typically submit one draw per month to [Redacted Company]. [Redacted Company] receives a notification from [Redacted Company] concerning the construction draw amount and availability of construction draw documentation (including the General Contractor&#x27;s payment application, the inspector&#x27;s report, and the title policy date down endorsement). Once reviewed and approved by [Redacted Company], the sub-participant is invoiced for its share of the draw. Once the wires are received, [Redacted Company] transfers the construction draw amount to [Redacted Company].</p><h1 id="11cb7e8c-1da9-818c-8c6d-f3edf6796090" class="">Table of Contents</h1><p id="11cb7e8c-1da9-816a-b161-fbd347e53474" class=""><a href="about:blank#appendix-a-borrower-ownership-structure">APPENDIX A – BORROWER OWNERSHIP STRUCTURE 17</a></p><p id="11cb7e8c-1da9-814e-b602-f7c8530ea38c" class=""><a href="about:blank#appendix-b---sources-and-uses">APPENDIX B - SOURCES AND USES 18</a></p><p id="11cb7e8c-1da9-8192-8b07-dcb1b696411b" class=""><a href="about:blank#appendix-c-financial-projections">APPENDIX C – FINANCIAL PROJECTIONS 20</a></p><p id="11cb7e8c-1da9-810f-83c9-dce15b38e7ab" class=""><a href="about:blank#appendix-d-rent-structure">APPENDIX D – RENT STRUCTURE 21</a></p><p id="11cb7e8c-1da9-81b9-8446-c2e99a3a2759" class=""><a href="about:blank#appendix-e-scenario-analysis-tables">APPENDIX E – SCENARIO ANALYSIS TABLES 22</a></p><p id="11cb7e8c-1da9-8167-9151-cf90277107c5" class=""><a href="about:blank#appendix-f-corporate-sponsor-financials">APPENDIX F – CORPORATE SPONSOR FINANCIALS 23</a></p><p id="11cb7e8c-1da9-811f-8af6-fe5d4afcc6cd" class=""><a href="about:blank#appendix-g-financial-condition-personal-guarantor">APPENDIX G – FINANCIAL CONDITION PERSONAL GUARANTOR 25</a></p><p id="11cb7e8c-1da9-81c8-a445-f18d4916c47a" class=""><a href="about:blank#appendix-h-key-personnel-of-supporting-develoer">APPENDIX H – KEY PERSONNEL OF SUPPORTING DEVELOER 29</a></p><p id="11cb7e8c-1da9-8139-ade4-f68509d51545" class=""><a href="about:blank#appendix-h-partner-bank-key-financial-metrics">APPENDIX H – PARTNER BANK – KEY FINANCIAL METRICS 30</a></p><p id="11cb7e8c-1da9-81ae-b320-c0b1ec9ec03f" class=""><a href="about:blank#appendix-j-risk-rating-grid">APPENDIX J – RISK RATING GRID 33</a></p><h1 id="11cb7e8c-1da9-81b7-8274-ffcecb8d5adc" class="">APPENDIX A – BORROWER OWNERSHIP STRUCTURE</h1><p id="11cb7e8c-1da9-8173-8d8b-da90244c8f67" class="">[Chart redacted]</p><h1 id="11cb7e8c-1da9-810a-9f0c-df7c2962c831" class="">APPENDIX B - SOURCES AND USES</h1><p id="11cb7e8c-1da9-8129-9238-db032a96a431" class="">[Table redacted]</p><p id="11cb7e8c-1da9-8137-9328-f8d7ed3a4d2c" class="">The total project cost (TPC) for this development is [Redacted Amount], excluding the developer fee. This figure encompasses all expenses associated with the project&#x27;s construction and initial operations.</p><p id="11cb7e8c-1da9-816e-b4a5-c5d9435ecd51" class="">The construction loan for this project is structured at [Redacted Amount], with an interest rate fixed at [Redacted Percentage], which was the Prime rate as of the [Redacted Month] closing. The loan term is set for [Redacted Time Period], with an additional [Redacted Time Period] extension option available. Given the total project cost of [Redacted Amount] and the construction loan amount of [Redacted Amount], an equity contribution of [Redacted Amount] is necessary to ensure the project&#x27;s completion and stabilization. [Redacted Organization] is entitled to [Redacted Percentage] of the developer fee, with [Redacted Company] entitled to [Redacted Percentage] of the developer fee.</p><p id="11cb7e8c-1da9-8194-ad78-f93f3c080ac6" class="">The permanent loan for this development is sized at [Redacted Amount]. The interest rate for this loan was also fixed at closing at [Redacted Percentage] (or [Redacted Number] bps over the [Redacted Time Period] US Treasury Yield). The loan term extends through the construction period and continues for [Redacted Time Period] following conversion. This loan size is considered appropriate based on a minimum debt service coverage requirement of [Redacted Ratio] and an estimated net operating income of [Redacted Amount] in the first year of operations.</p><p id="11cb7e8c-1da9-819a-98e3-c594caf8d2bd" class="">Breaking down the project costs, hard costs amount to [Redacted Amount], which translates to [Redacted Amount] per unit. Soft, carrying, and financing costs total approximately [Redacted Amount]. Included in the soft costs is the construction period interest of [Redacted Amount], which is based on the [Redacted Financial Index] ([Redacted Percentage] as of [Redacted Date]). The interest reserve amount is calculated using a draw schedule provided by the developer, on a construction period of [Redacted Time Period]. It&#x27;s important to note that the final construction loan interest rate will be determined at closing, which could potentially alter the sources and uses of funds. In such an event, the deferred developer fee at conversion ([Redacted Amount]) may be reduced to accommodate any changes. If the alteration exceeds the deferred developer fee, the developer and guarantor may need to secure additional financing, such as general partner financing or an increased first mortgage.</p><p id="11cb7e8c-1da9-81de-847b-db80bfb8bb2a" class="">The project includes a construction contingency of [Redacted Amount], representing [Redacted Percentage] of hard costs. Additionally, the permanent loan will fund an operating reserve of [Redacted Amount], which is equivalent to approximately [Redacted Time Period] of operating expenses.</p><p id="11cb7e8c-1da9-81bb-a89b-de85a6bea6d7" class="">The developer fee for this project totals [Redacted Amount]. Of this amount, [Redacted Amount] will be deferred and earned over time from surplus cash flow generated by the project. The repayment timeline for the deferred developer&#x27;s fee is based on the project&#x27;s operating projections. Projections, as currently forecasted, set net cash flow after debt service and management fees at a rate over [Redacted Time Period] that produces [Redacted Amount] in sum, which is greater than the currently contracted [Redacted Amount] deferred developer fee by [Redacted Amount]. The fee structure allocates [Redacted Percentage] of the fee ([Redacted Amount]) to be earned at the completion of construction, with an additional [Redacted Percentage] ([Redacted Amount]) to be earned upon stabilization of the property, and the rest to be earned via net cash flow after debt service and management fees.</p><p id="11cb7e8c-1da9-816f-a84a-d7bf168930a5" class="">[Table redacted]</p><h1 id="11cb7e8c-1da9-81c2-a47c-ed6aee181df2" class="">APPENDIX C – FINANCIAL PROJECTIONS</h1><p id="11cb7e8c-1da9-818f-b6d8-e15def93076e" class="">[Table redacted]</p><p id="11cb7e8c-1da9-8149-85a0-f2bb2abb3591" class="">[Redacted Organization] has examined the financial projections for this project to determine its ability to meet debt obligations. According to our analysis, the Debt Service Coverage Ratio (DSCR) on the subject loan is projected to remain above [Redacted Ratio] from Year 1 through Year 15, indicating that the project is well-positioned to cover its debt service requirements.</p><p id="11cb7e8c-1da9-81d3-9b7b-cd63e92451c6" class="">Revenue Overview: The project&#x27;s revenue is projected to start at [Redacted Amount] in Year 1 and grow to [Redacted Amount] by Year 15. On a per-unit basis, this equates to initial gross revenue of [Redacted Amount] per unit, increasing to [Redacted Amount] per unit over the same period. The revenue stream includes a small portion from other income sources, beginning at [Redacted Amount] annually and rising to [Redacted Amount] by Year 15. This other income, which accounts for [Redacted Percentage] of total gross rental income, translates to [Redacted Amount] per unit per year.</p><p id="11cb7e8c-1da9-81ee-b22c-dcdbba7f5849" class="">Vacancy and Collection Loss: The project&#x27;s financial projections account for a [Redacted Percentage] vacancy rate, which is higher than the sub-[Redacted Percentage] concluded by both the market data and the appraisal. This rate includes a [Redacted Percentage] vacancy allowance and a [Redacted Percentage] collection loss allowance. Notably, the market study estimates a lower vacancy rate of [Redacted Percentage] for market-rate units, which reflects a more optimistic scenario.</p><p id="11cb7e8c-1da9-816d-97ef-ec06b4dbd676" class="">Operating Expenses: Operating expenses are projected to be [Redacted Amount] in Year 1, which represents [Redacted Percentage] of the gross rental income. These expenses are expected to escalate by [Redacted Percentage] annually, reaching [Redacted Amount] by Year 15. On a per-unit basis, this equates to [Redacted Amount] annually or [Redacted Amount] per month. This is slightly below expectations, as the appraisal&#x27;s set of comparables reports an average OPEX per-unit of [Redacted Amount] annually, or [Redacted Amount] per month, primarily explained by difference in amenities (i.e. pool maintenance), differing maintenance costs, and management compensation variances. The financial model also includes a replacement reserve budgeted at [Redacted Percentage] of gross rental income, amounting to [Redacted Amount] in Year 1, or [Redacted Amount] per unit. Additionally, a management fee of [Redacted Percentage] of gross rental income is factored in, totaling [Redacted Amount] in Year 1. This management fee is on the lower end of the typical [Redacted Percentage] to [Redacted Percentage] range, and on the lower end of comparable properties, but remains within industry standards.</p><p id="11cb7e8c-1da9-8118-9140-fdcc841d3367" class="">Debt Service and Coverage: The debt service for the permanent loan is projected at [Redacted Amount] per year, based on a [Redacted Percentage] interest rate and a [Redacted Time Period] amortization period. This results in a stabilized Debt Service Coverage Ratio (DSCR) of [Redacted Ratio]. The global DSCR, which includes debt service for both the permanent and a subsidized refinancing loan, starts at [Redacted Ratio] in Year 1 and improves to [Redacted Ratio] by Year 15. When considering only the permanent loan, the DSCR (referred to as the &quot;Legacy DSCR&quot;) begins at [Redacted Ratio] in Year 1 and increases to [Redacted Ratio] by Year 15.</p><h1 id="11cb7e8c-1da9-8137-849b-fb70ddcf2a9f" class="">APPENDIX D – RENT STRUCTURE</h1><p id="11cb7e8c-1da9-81f7-8bea-c310df489582" class="">[Table redacted]</p><p id="11cb7e8c-1da9-81f7-8c7e-c535419aba27" class="">The property is expected to attain stabilization [Redacted Time Period] after the completion of construction. During this period, management will initiate the leasing process with the aim of achieving their target occupancy rate of [Redacted Percentage]. The development consists of two-unit types: [Redacted Unit Type] units and [Redacted Unit Type] units. Out of the total [Redacted Number] units, [Redacted Number] are [Redacted Unit Type] units, while the remaining [Redacted Number] are [Redacted Unit Type] units. The units range in size from an average of [Redacted Size] square feet to [Redacted Size] square feet, with a total net rental square footage of [Redacted Size] square feet.</p><p id="11cb7e8c-1da9-81ad-a102-f095e5860ff4" class="">The rent structure of the property incorporates Area Median Income (AMI) restrictions. According to a market analysis conducted by [Redacted Company], [Redacted Number] comparable affordable housing properties in the area demonstrate market rents averaging [Redacted Amount] per unit, representing a [Redacted Percentage] increase from the previous period&#x27;s [Redacted Amount] per unit. According to the [Redacted Company] Market study, average market rents are [Redacted Amount]. An analysis of the rent structure reveals that the average weighted savings, proportionate to units per AMI class, is estimated at [Redacted Amount] per unit per month. This bolsters the case for the latent demand for the proposed project, due to the relative savings to be realized by tenants that qualify.</p><h1 id="11cb7e8c-1da9-8155-87f7-caafb525605d" class="">APPENDIX E – SCENARIO ANALYSIS TABLES</h1><p id="11cb7e8c-1da9-81ad-970e-caf1bd23ba46" class="">[Table redacted]</p><p id="11cb7e8c-1da9-819f-b0d7-f336d740ad5e" class="">The purpose of the scenario analysis is to stress test variable assumptions in the submitted pro forma. This analysis aims to determine the maximum stress for a [Redacted Financial Ratio] Debt Service Coverage Ratio (DSCR) with the permanent loan Principal and Interest (P&amp;I), as well as to present the DSCR outcome if a [Redacted Percentage] shock was applied to the interest rate. The specific variables subjected to stress testing in this analysis include rent per unit, interest rate, vacancy rate, and Operating Expenses (OPEX) as a percentage of Gross Rental Income (GRI). All variables were evaluated based on Year 1 of the pro forma.</p><p id="11cb7e8c-1da9-818a-b255-f9f89901d516" class="">In the minimum rent per unit scenario, the analysis determined that a monthly rent of [Redacted Amount], representing a [Redacted Percentage] decrease, would be required to achieve a [Redacted Financial Ratio] DSCR. This scenario is mitigated by project rents being [Redacted Percentage] below market, insulating the property from market rent volatility due to changes in supply.</p><p id="11cb7e8c-1da9-8109-b32d-fbc0a450d071" class="">For the maximum interest rate scenario, a [Redacted Financial Ratio] DSCR would require an interest rate of [Redacted Percentage], representing a [Redacted Percentage] increase. This scenario is mitigated by the pricing structure of the permanent loan, which is set at [Redacted Financial Index] plus [Redacted Basis Points]. However, since the permanent loan has closed and the rate is locked at [Redacted Percentage], there is very little risk to interest rates driving negative cash flow.</p><p id="11cb7e8c-1da9-8148-a1d7-ff9cfe45f97b" class="">In the maximum vacancy rate scenario, a [Redacted Percentage] vacancy rate, representing a [Redacted Percentage] point increase, would be necessary to achieve a [Redacted Financial Ratio] DSCR. This scenario is mitigated by current market trends in the project area. The market analysis reports vacancy rates ranging from [Redacted Percentage] to [Redacted Percentage] among [Redacted Number] comparable properties, indicating that the initial [Redacted Percentage] vacancy rate assumption was already conservative for this market.</p><p id="11cb7e8c-1da9-81d2-b027-c95b3078c979" class="">For the maximum OPEX % scenario, achieving a [Redacted Financial Ratio] DSCR would require OPEX to be [Redacted Percentage] of GRI, representing a [Redacted Percentage] increase. This scenario is mitigated by data presented in the market analysis, which reports OPEX as a percentage of GRI ranging from an unspecified lower bound to an unspecified upper bound among the [Redacted Number] comparable properties.</p><p id="11cb7e8c-1da9-811d-acdc-ec2f46e97145" class="">Lastly, a [Redacted Percentage] interest rate shock would result in a DSCR of [Redacted Financial Ratio]. The mitigating factors for this scenario are the same as those outlined for the maximum interest rates scenario.</p><h1 id="11cb7e8c-1da9-8166-82ce-ecd48914b425" class="">APPENDIX F – CORPORATE SPONSOR FINANCIALS</h1><p id="11cb7e8c-1da9-8113-8f1c-d2f844addbcd" class="">[Table redacted]</p><p id="11cb7e8c-1da9-81ee-a669-e66306e8c166" class="">Corporate Guarantor: [Redacted Company] is an established entity in the multifamily development market. The entity&#x27;s balance sheet represents assets totaling [Redacted Amount] (comprised of cash, developer fee receivables, and real estate) and liabilities of [Redacted Amount] (mainly to related entities) and equity of [Redacted Amount]. Over recent years, the company&#x27;s assets and liabilities have increased substantially, reflecting its ongoing development activities. The debt-to-equity ratio stands at [Redacted Percentage], a figure that remains very manageable within the real estate development sector.</p><p id="11cb7e8c-1da9-8120-993e-ff6e1c909063" class="">[Table redacted]</p><p id="11cb7e8c-1da9-817d-8259-e176366e540f" class="">(1) No income statement was attached to the [Redacted Date] company prepared financials.</p><p id="11cb7e8c-1da9-81fa-8d59-c99199e97b31" class="">Income and Expenses: The Corporate Guarantor&#x27;s income has risen significantly, from [Redacted Amount] in its [Redacted Year], its first year of operations to [Redacted Amount] as [Redacted Name] began performing projects under [Redacted Company] instead of [Redacted Company]. Income is almost entirely driven by developer fees.</p><h1 id="11cb7e8c-1da9-8167-8edf-c56eaf11a355" class="">APPENDIX G – FINANCIAL CONDITION PERSONAL GUARANTOR</h1><p id="11cb7e8c-1da9-8129-82fe-fb0d31fb7245" class="">[Table redacted]</p><p id="11cb7e8c-1da9-8199-812f-cf4d3019595b" class="">The personal guarantor, [Redacted Name], reports total assets of [Redacted Amount] and total liquidity of [Redacted Amount] as of [Redacted Date], according to his personal financial statement. His [Redacted Year] tax returns indicate a total cash flow of [Redacted Amount]. [Redacted Name]&#x27;s primary sources of income are distributions, followed by wages and salary income.</p><p id="11cb7e8c-1da9-81ba-ab64-f688d2601da8" class="">As of [Redacted Date], [Redacted Name] reports a financial position that includes [Redacted Amount] in assets before investments and [Redacted Amount] in liabilities. His investment portfolio is valued based on book value based on the guarantor&#x27;s representation at [Redacted Amount]. Consequently, [Redacted Name]&#x27;s net worth stands at [Redacted Amount]. His reported liquid assets in the form of cash amount to [Redacted Amount].</p><p id="11cb7e8c-1da9-812d-95e2-ea9516679a1f" class="">The asset composition of [Redacted Name]&#x27;s portfolio is predominantly derived from his net ownership interests in companies affiliated with [Redacted Company] and [Redacted Company], the latter being the Corporate Guarantor. As of [Redacted Date], the valuation of his business assets were estimated by the Sponsor. It is worth noting that these assets are likely to be illiquid, given that these entities are development companies and their balance sheets likely include real estate holdings.</p><p id="11cb7e8c-1da9-81e2-b884-c580d45bcbb1" class="">[Redacted Name]&#x27;s liability structure primarily consists of obligations related to his personal residence and automobiles. His personal debt service requirements encompass monthly payments on two vehicles and a mortgage on his personal residence. The mortgage payment is reported at [Redacted Amount] per month, equating to an annual outlay of [Redacted Amount]. The combined annual debt service for his vehicles amounts to [Redacted Amount], with monthly payments of [Redacted Amount] and [Redacted Amount] respectively.</p><p id="11cb7e8c-1da9-814f-ba79-e3d719cfb058" class="">[Table redacted]</p><p id="11cb7e8c-1da9-811b-b3a0-c3479aaa1a1b" class="">[Table redacted]</p><p id="11cb7e8c-1da9-81dc-a227-c208ff159aec" class="">An analysis of [Redacted Name]&#x27;s cash flow, based on his submitted tax returns for [Redacted Year] and [Redacted Year], reveals that his primary and consistent source of income is distributions from [Redacted Company], followed by wages. It should be noted that his [Redacted Year] tax returns are currently on extension. A significant financial event occurred in [Redacted Year], with a reported capital gain of [Redacted Amount]. His total cash income for [Redacted Year] and [Redacted Year] was [Redacted Amount] and [Redacted Amount], respectively. With personal debt service remaining constant at [Redacted Amount] in both years, this translates to a debt-to-income ratio (DTI) of [Redacted Percentage] in [Redacted Year] and [Redacted Percentage] in [Redacted Year]. Additionally, [Redacted Name] has a credit score of [Redacted Number].</p><p id="11cb7e8c-1da9-8199-a0e8-d6ad568714ad" class=""><strong><span style="border-bottom:0.05em solid">Real Estate Owned Schedule:</span></strong></p><p id="11cb7e8c-1da9-8193-80bf-e83064043f11" class="">[Table redacted]</p><p id="11cb7e8c-1da9-8140-ac1c-da29f0fcedbd" class="">(1) Income, expense, and debt service are projected figures. If applicable, market-rate projects include ILP equity investments. Final developer equity is still to be determined.</p><ul id="11cb7e8c-1da9-81b6-bbd7-d1fb3f93ee15" class="bulleted-list"><li style="list-style-type:disc">Debt service coverage ratio averages at [Redacted Ratio], [Redacted Ratio], and [Redacted Ratio], for stabilized, pre-stabilized, and overall, respectively (with non-stabilized projects based on projections). None of the properties report lower than [Redacted Ratio] DSCR. Of the [Redacted Number] properties, [Redacted Number] properties report [Redacted Ratio] to [Redacted Ratio] DSCR. All [Redacted Number] properties are pre-stabilization and report NOI and DS as projected at stabilization, and so are not the actual recorded figures.</li></ul><ul id="11cb7e8c-1da9-812f-9542-e01fb3103667" class="bulleted-list"><li style="list-style-type:disc">On average, [Redacted Name] reports an average ownership of [Redacted Percentage], [Redacted Percentage], and [Redacted Percentage] of the GP for stabilized, pre-stabilized, and overall, respectively.</li></ul><p id="11cb7e8c-1da9-8139-b135-c6c51dbc206e" class=""><strong><span style="border-bottom:0.05em solid">Contingent Liabilities:</span></strong></p><p id="11cb7e8c-1da9-8140-b6ad-d07a055f37b7" class="">[Redacted Name] has a substantial portfolio of LIHTC projects in which he is the GP, which require personal guarantees on commercial real estate pre-stabilization and operating deficit guarantee to the LP investor post-stabilization. As of [Redacted Date], [Redacted Name] reported contingent liabilities to be [Redacted Amount] ([Redacted Amount] of construction loan guarantees and [Redacted Amount] of operating deficit guarantees. While the contingent liabilities are significant, the firm&#x27;s proven track record of successful project completions and property management mitigates associated risks. Even further, these projects are staggered and only one is reported to still be under construction at the time of this memo. As a result, the majority of the construction loan contingent liabilities will terminate with the conversion to non-recourse permanent debt on stabilization.</p><p id="11cb7e8c-1da9-81c9-bb3c-fdc4e1ce5567" class="">[Table redacted]</p><p id="11cb7e8c-1da9-81f7-9f2b-edcbced38cbb" class="">[Table redacted]</p><p id="11cb7e8c-1da9-810e-b007-fc252852b4db" class=""><strong><span style="border-bottom:0.05em solid">Contingent Liabilities Highlights:</span></strong></p><ul id="11cb7e8c-1da9-818a-bcf1-c8bb7250172f" class="bulleted-list"><li style="list-style-type:disc">Contingent Liabilities are delineated between Operating Deficit Guarantees and Construction Loans. Operating Deficit Guarantees result in a [Redacted Amount] liability with Construction Loans totaling [Redacted Amount] for an aggregate of [Redacted Amount]</li></ul><ul id="11cb7e8c-1da9-81c8-a5e9-d9de88ed994e" class="bulleted-list"><li style="list-style-type:disc">Operating Deficit Guarantees are for properties that are after conversion and are at maximum for [Redacted Time Period] after conversion. As reported, the current furthest guarantee from term is for [Redacted Property Name].</li></ul><h1 id="11cb7e8c-1da9-8154-88da-c782f1d9b4c8" class="">APPENDIX H – KEY PERSONNEL OF SUPPORTING DEVELOER</h1><p id="11cb7e8c-1da9-8119-bd9d-c0351950e243" class=""><em><strong><span style="border-bottom:0.05em solid">Supplemental Team Bio:</span></strong></em></p><p id="11cb7e8c-1da9-813b-9f75-df8fb88f5cfc" class=""><span style="border-bottom:0.05em solid">[Redacted Name]: President of [Redacted Company], the &quot;Supporting Developer&quot;</span></p><p id="11cb7e8c-1da9-8105-b995-da65a359b583" class="">[Redacted Name] currently serves as the President of [Redacted Company], a company established in the mid-1990s. His career spans over two decades in public service, including [Redacted Number] years in local government. [Redacted Name] was appointed as the first Executive Director of the [Redacted Government Agency] by Governor [Redacted Name], a role he continued under Governor [Redacted Name]&#x27;s administration.</p><p id="11cb7e8c-1da9-813c-9d6c-c1617770e501" class="">[Redacted Name]&#x27;s expertise in housing and community development led to his appointment as Chairman of the [Redacted Government Agency] by both President [Redacted Name] and President [Redacted Name], demonstrating his ability to work effectively across party lines at both state and federal levels. His experience also includes serving as the Vice President of Public Finance for [Redacted Company].</p><p id="11cb7e8c-1da9-81ba-bbb2-d4ed079b8c41" class="">In his role as the former President of the [Redacted Organization], [Redacted Name] oversaw significant initiatives in affordable housing. During his tenure, he managed the issuance of over [Redacted Amount] in bonds, which facilitated the availability of single-family mortgages for targeted consumers. Additionally, his leadership contributed to the development of more than [Redacted Number] units of affordable multi-family housing.</p><p id="11cb7e8c-1da9-816a-b526-fc5b5dfe4c83" class="">Throughout his career, [Redacted Name] has focused on facilitating efforts of public agencies and non-profit corporations. His work has centered on maximizing operating revenue, creating additional physical assets, and providing affordable housing solutions. These efforts reflect his commitment to addressing housing needs and community development challenges.</p><h1 id="11cb7e8c-1da9-81d7-a9b4-c1f2b2665c10" class="">APPENDIX H – PARTNER BANK – KEY FINANCIAL METRICS</h1><p id="11cb7e8c-1da9-8152-aac5-f4dd1dbccf2d" class="">[Table redacted]</p><h1 id="11cb7e8c-1da9-81a6-9611-fb3a7c2b7091" class="">APPENDIX J – RISK RATING GRID</h1><p id="11cb7e8c-1da9-811f-b2f3-c958beccd8cf" class="">[Table redacted]</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
