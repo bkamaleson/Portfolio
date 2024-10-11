@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>NMTC Credit Memo [Redacted Sample]</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="11cb7e8c-1da9-805e-af77-e1a359458122" class="page sans"><header><h1 class="page-title">NMTC Credit Memo [Redacted Sample]</h1><p class="page-description"></p><table id="11cb7e8c-1da9-81a3-9df2-dd116287d6b2" class="simple-table"><tbody><tr id="11cb7e8c-1da9-8162-b67f-d58d616a89ee"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Summary</strong></td><td id="rpFA" class="" style="width:230.0069580078125px"></td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-8136-a395-f42416e49d1f"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Borrower</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">[Redacted Company Name], a federally qualified health center</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-8110-aa68-e71da5004cb4"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Lenders</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">Lead Source Lender: [Redacted Company Name] ([Redacted Company Name])<br/>Participants Source Loan: [Redacted Company Name], [Redacted Company Name]<br/></td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-810a-9445-fc125538f64d"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Requested Amount</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">Requested [Redacted Company Name] Loan amount: Up to [Redacted Dollar Amount];<br/>Total Source Loan to Borrower – approximately [Redacted Dollar Amount], distributed as follows:<br/>• [Redacted Company Name]: [Redacted Dollar Amount]<br/>• [Redacted Company Name]: [Redacted Dollar Amount]<br/>• [Redacted Company Name]: [Redacted Dollar Amount]<br/></td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-819b-9fe2-cee3b7f2f962"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Purpose of Loans</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">The Source Loan will be part of the capital structure that uses NMTC financing to construct a new [Redacted Square Footage] health clinic in [Redacted Geographic Location].<br/>Site address:[Redacted Physical Address]<br/></td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-8186-bbe1-e3354fdc5f15"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>NMTC</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">[Redacted Dollar Amount] in QEIs, as follows:<br/>• [Redacted Company Name] CDE (&quot;[Redacted Company Name] CDE&quot;): [Redacted Dollar Amount], to be approved along with the subject loan.<br/>• [Redacted Company Name] (&quot;[Redacted Company Name] Allocatee&quot;): [Redacted Dollar Amount]<br/>• [Redacted Company Name] CDE (&quot;[Redacted Company Name] CDE&quot;): [Redacted Dollar Amount]<br/></td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-81ea-b0e8-f524b6025f51"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Guarantors</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">Borrower [Redacted Company Name] will provide a completion guarantee</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-811a-abf3-d56ec53bcb73"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Term and Amortization</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">[Redacted Time Period], interest only during construction and throughout compliance period, then amortizing on a [Redacted Time Period] amortization schedule</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-8182-b1c1-d33d8b8b48a9"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Loan Fee</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">[Redacted Percentage]</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-813c-895b-d81c04b7e3d8"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Interest Rate (%)</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">Source Loan: [Redacted Company Name] portion fixed at close, based upon the [Redacted Time Period] treasury yield plus [Redacted Percentage], and a floor rate of [Redacted Percentage]. This rate will apply during the construction and permanent phase of the loan. [Redacted Company Name] will charge a fixed rate of [Redacted Percentage] for its portion of the Source Loan</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-81db-a7e0-ecec654f99bd"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Collateral/LTV/DSCR</strong></td><td id="rpFA" class="" style="width:230.0069580078125px"><span style="border-bottom:0.05em solid">Collateral</span>: First priority mortgage on property by [Redacted Company Name]&#x27;s sub CDE, shared with [Redacted Company Name] and [Redacted Company Name] Sub CDEs,<span style="border-bottom:0.05em solid">LTV</span>not to exceed [Redacted Percentage]<span style="border-bottom:0.05em solid">DSCR</span>: Minimum [Redacted Ratio] Debt Service Coverage Ratio for borrower&#x27;s consolidated operations</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-816d-b414-e75a91071871"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Repayment Sources</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">1. Primary: Operating cash flow from new clinic<br/>2. Secondary: Capital from the sponsor under full repayment guarantee<br/>3. Tertiary: Liquidation of collateral<br/></td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-81a7-a45a-f43f4134d4b6"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Prepayment Penalty</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">Yield maintenance if borrower refinances source loan before maturity date with another lender. Borrower pay prepay at any time from its own sources.</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-811a-a5e1-d49cb58d3e61"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Risk Rating</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">[Redacted Number]</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-81ee-8bc1-e684428536e2"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Impact Rating</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">[Redacted Number]</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-81e7-a264-c0fce4393674"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Other</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">EBBC: Source Loan&#x27;s lead lender is [Redacted Company Name], the largest black-owned financial institution in the US. NMTC Consultant, [Redacted Company Name], is a black owned firm</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-8165-b8ba-d213ec8895e0"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Policy Exception(s)</strong></td><td id="rpFA" class="" style="width:230.0069580078125px">None</td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-8193-ad90-f583e8c610d8"><td id="T|b}" class="" style="width:230.0069580078125px"><strong>Approvals</strong></td><td id="rpFA" class="" style="width:230.0069580078125px"><strong>Action</strong></td><td id="pgMS" class="" style="width:230.0069580078125px"><strong>Date</strong></td></tr><tr id="11cb7e8c-1da9-8197-98ad-f6a003c620f1"><td id="T|b}" class="" style="width:230.0069580078125px"><span style="border-bottom:0.05em solid">[Redacted Name], [Redacted Name], [Redacted Name]</span></td><td id="rpFA" class="" style="width:230.0069580078125px">Recommend</td><td id="pgMS" class="" style="width:230.0069580078125px"><strong>[Redacted Date]</strong></td></tr><tr id="11cb7e8c-1da9-812a-b085-fd90fdac3d7b"><td id="T|b}" class="" style="width:230.0069580078125px"><span style="border-bottom:0.05em solid">[Redacted Name]</span></td><td id="rpFA" class="" style="width:230.0069580078125px">Concur</td><td id="pgMS" class="" style="width:230.0069580078125px"><strong>[Redacted Date]</strong></td></tr><tr id="11cb7e8c-1da9-81a0-94d3-c13bed1948ab"><td id="T|b}" class="" style="width:230.0069580078125px"><span style="border-bottom:0.05em solid">[Redacted Company Name] Loan Committee</span>[Redacted Name] (Chair), [Redacted Name], [Redacted Name], [Redacted Name]</td><td id="rpFA" class="" style="width:230.0069580078125px"></td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr><tr id="11cb7e8c-1da9-818e-81c0-d992f7e2b52d"><td id="T|b}" class="" style="width:230.0069580078125px"><span style="border-bottom:0.05em solid">[Redacted Company Name] Loan Committee</span>[Redacted Name] (Chair), [Redacted Name], [Redacted Name], [Redacted Name] ([Redacted Company Name]), [Redacted Name] ([Redacted Company Name])</td><td id="rpFA" class="" style="width:230.0069580078125px"></td><td id="pgMS" class="" style="width:230.0069580078125px"></td></tr></tbody></table><h1 id="11cb7e8c-1da9-8103-98f8-e87bde4f38c2" class="">Executive Summary</h1><p id="11cb7e8c-1da9-8184-adac-de6a6710b1b6" class="">Rendering of the [Redacted Company Name] Clinic</p><h2 id="11cb7e8c-1da9-8111-b963-ddd5fc638d19" class="">Background</h2><p id="11cb7e8c-1da9-81f3-b722-cd4e26d545a6" class="">[Redacted Company Name] (&quot;[Redacted Company Name]&quot;) is a federally qualified health center with [Redacted Number] clinics in [Redacted Geographic Location] in [Redacted Geographic Location]. Founded in [Redacted Year], it operates health clinics in the cities of [Redacted Geographic Location], [Redacted Geographic Location], [Redacted Geographic Location], [Redacted Geographic Location], and [Redacted Geographic Location], and is the largest provider of primary health care in [Redacted Geographic Location]. Annually [Redacted Company Name] serves over [Redacted Number] unique patients ([Redacted Percentage] minority, [Redacted Percentage] Low Income), employs [Redacted Number] staff ([Redacted Percentage] Minority). From [Redacted Year] to [Redacted Year], [Redacted Company Name] added [Redacted Number] new unique patients, representing a [Redacted Percentage] growth rate.</p><p id="11cb7e8c-1da9-8152-bb37-cd63e948f7bb" class="">To help accommodate its growth in patient visits, [Redacted Company Name] plans to open its [Redacted Number] location, the [Redacted Square Footage] [Redacted Company Name] Health Center. The site is located in a medically underserved area within the City of [Redacted Geographic Location], [Redacted Geographic Location], in [Redacted Geographic Location], adjacent to [Redacted Geographic Location] where to date [Redacted Company Name] has located all of its clinics. [Redacted Geographic Location] is a small city on the western edge of the [Redacted Geographic Location], about an hour and a half drive from [Redacted Geographic Location], [Redacted Geographic Location]. It is over [Redacted Percentage] Hispanic, and the city&#x27;s population has grown in recent years, including from in-migration from [Redacted Geographic Location] residents seeking lower cost housing.</p><p id="11cb7e8c-1da9-81e4-97aa-c1de34835a21" class="">[Redacted Company Name] is a strong clinic operator and sponsor, with a net worth at the end of [Redacted Year] of nearly [Redacted Dollar Amount]. It has an experienced senior management team and board of directors. [Redacted Company Name] staff conducted a site visit on [Redacted Date], meeting with their Chief Operating Officer and touring their [Redacted Geographic Location] clinic campus as well as visiting the [Redacted Geographic Location] site. Joining on the site visit were two members of [Redacted Company Name]&#x27;s credit team. The [Redacted Company Name] facilities were similar in quality to a top-notch clinic or medical office facility, and the visiting team was favorably impressed by [Redacted Company Name]&#x27;s community programming, including medical services provided in the local schools and a mobile clinic that provides care to more remote regions of their service area.</p><p id="11cb7e8c-1da9-814a-b6a3-c90343d59ff4" class="">[Redacted Company Name]&#x27;s participation in the source loan is an opportunity to contribute to the expansion of a health program in [Redacted Geographic Location], as well as further [Redacted Company Name]&#x27;s relationship with [Redacted Company Name], a partner bank located in [Redacted Geographic Location].</p><h2 id="11cb7e8c-1da9-813c-b1da-d438000f61b0" class="">Financing Request</h2><p id="11cb7e8c-1da9-8158-9d04-c771cc6c9685" class=""><strong>Loan</strong></p><p id="11cb7e8c-1da9-81a4-a3b7-e89f43d9f96f" class="">[Redacted Company Name] requests approval to participate [Redacted Dollar Amount] in a [Redacted Dollar Amount] Source loan led by [Redacted Company Name] of [Redacted Geographic Location]. Fifty percent, or [Redacted Dollar Amount], of this loan will participated out to [Redacted Company Name] leaving with a total exposure of [Redacted Dollar Amount] at [Redacted Company Name]. The proceeds of the source loan will be used for the Borrower to make a leverage loan to the [Redacted Geographic Location] NMTC Investment Fund, LLC (&quot;Investment Fund&quot;).</p><p id="11cb7e8c-1da9-81a5-bf14-e8adb8c61ab2" class="">[Redacted Company Name]&#x27;s [Redacted Dollar Amount] loan participation would initially be funded by [Redacted Company Name] and then sold to the Credit Strategies Fund once additional capital is raised in CSF.</p><p id="11cb7e8c-1da9-81e3-b51c-ffb1c080f56c" class="">[Redacted Company Name] will participate a [Redacted Dollar Amount] portion to [Redacted Company Name] as soon as [Redacted Company Name] has completed its underwriting. We are requesting [Redacted Time Period] following closing of the [Redacted Dollar Amount] portion of the Source Loan to sell [Redacted Company Name]&#x27;s [Redacted Dollar Amount] sub-participation to [Redacted Company Name].</p><p id="11cb7e8c-1da9-8167-9613-d3edb94adb7a" class="">An appraisal completed by [Redacted Company Name] on [Redacted Date] concluded the value of the Property to be [Redacted Dollar Amount] as the prospective market value upon completion and stabilization based on the sales comparison approach, implying an LTV of [Redacted Percentage] for total Source Loan of [Redacted Dollar Amount]. See <a href="about:blank#appendix-f-appraisal-summary">Appendix F</a> for more information.</p><p id="11cb7e8c-1da9-81a1-bffa-e8255891e0ac" class="">[Redacted Company Name] is a nationwide real estate evaluation firm, and was recommended by [Redacted Company Name] based upon [Redacted Company Name]&#x27;s experience in the [Redacted Geographic Location] market. [Redacted Company Name] has retained [Redacted Company Name] for appraisal services, and was in favor of using them to evaluate the [Redacted Geographic Location] clinic.</p><p id="11cb7e8c-1da9-81ca-9ffa-ced21da638fd" class=""><strong>NMTC Allocation</strong></p><p id="11cb7e8c-1da9-8100-a521-f4b29a45b944" class="">[Redacted Company Name] also requests approval to deploy of [Redacted Dollar Amount] of its [Redacted Year] NMTC award for the financing of the [Redacted Company Name] clinic. This tax credit deployment is consistent with our strategy to finance high impact projects including federally qualified health clinics in distressed communities.</p><h2 id="11cb7e8c-1da9-81b1-9c30-ff1f646b5e83" class=""><strong>Risk and Mitigants</strong></h2><ol type="1" id="11cb7e8c-1da9-81bc-8a60-feff18587c7c" class="numbered-list" start="1"><li><em>Construction Risk</em> – Timely repayments of Source Loan depends on the successful construction completion of the project. Any delays, cost overruns, or other events that adversely impact construction progress may influence the [Redacted Company Name] or [Redacted Company Name]&#x27;s ability to make debt service payments.<p id="11cb7e8c-1da9-80a4-83d2-ec78427be980" class="">Mitigants:</p><ul id="11cb7e8c-1da9-81e5-b5c1-cd398312a049" class="bulleted-list"><li style="list-style-type:disc">The Sponsor has extensive experience in developing clinics, with the [Redacted Geographic Location] project representing their [Redacted Number] facility. They have been in operation for [Redacted Number] years.</li></ul><ul id="11cb7e8c-1da9-81e1-a438-e7d1ea2778d9" class="bulleted-list"><li style="list-style-type:disc">[Redacted Company Name] will execute a [Redacted Percentage] completion and repayment guarantee. Their financial position is very strong.</li></ul></li></ol><ol type="1" id="11cb7e8c-1da9-8132-9aab-f9f51df2548d" class="numbered-list" start="2"><li><em>Operation Risk –</em> The new clinic will be used by [Redacted Company Name] as their expansion into the [Redacted Geographic Location]/[Redacted Geographic Location] market. Should patient demand not meet expectations, or if operating costs are higher than anticipated, the clinic will not generate the projected revenues.<p id="11cb7e8c-1da9-8023-b249-e7830b5e5e66" class="">Mitigants:</p><ul id="11cb7e8c-1da9-81f0-a0e6-d865b0555a5e" class="bulleted-list"><li style="list-style-type:disc">Projected Net Operating Income: [Redacted Company Name] is expected to generate positive cash flow starting in the stabilization period ([Redacted Year]) with NOI of [Redacted Dollar Amount] in the first full year of operations, increasing to [Redacted Dollar Amount] by [Redacted Year] (refer to <a href="about:blank#appendix-b-qalicb-financial-projections-5-years-operating-cash-flow">Appendix C</a> for additional details).</li></ul><ul id="11cb7e8c-1da9-8104-ab9f-f0a5d102685b" class="bulleted-list"><li style="list-style-type:disc">Experienced sponsors: The sponsors have significant experience and a strong track record as a health clinic operator and developer of new clinic facilities. The Community Health Needs Assessment prepared for the [Redacted Geographic Location] market indicates high need and strong demand for health and dental services.</li></ul><ul id="11cb7e8c-1da9-8167-8eca-c751a9cd346b" class="bulleted-list"><li style="list-style-type:disc">Collateral coverage: Collateral is a pledge of security interest in each [Redacted Company Name] that will have a 1st lien on the project. The appraisal dated [Redacted Date] indicated a loan to value (LTV) of just under [Redacted Percentage] based upon a total loan of [Redacted Dollar Amount].</li></ul><ul id="11cb7e8c-1da9-8145-bfdb-c132410c4f40" class="bulleted-list"><li style="list-style-type:disc">[Redacted Company Name] has commissioned an appraisal for an additional property owned by [Redacted Company Name], a medical office building in [Redacted Geographic Location], [Redacted Geographic Location] to support a higher loan amount. The two properties together must satisfy an LTV for the Source Loan of no higher than [Redacted Percentage].</li></ul></li></ol><ol type="1" id="11cb7e8c-1da9-81c9-9f41-c27ddd02506a" class="numbered-list" start="3"><li>Political Risk – Given the nature of the [Redacted Company Name]&#x27;s population, revenue from Medicaid, Medicare, and other funding from the federal government could vary due to political risk. This risk default is mitigated by the following:<ul id="11cb7e8c-1da9-81e4-a94f-c093db6b7c78" class="bulleted-list"><li style="list-style-type:disc">Popular support – Medicare and Medicaid are both federal programs that have wide spread popularity with the public.</li></ul><ul id="11cb7e8c-1da9-8150-9534-c258bf830c69" class="bulleted-list"><li style="list-style-type:disc">Longevity – Medicare and Medicaid have been federal programs for nearly six decades. It is highly unlikely that Congress would take a drastic step with long-standing programs, with its considerable market disruption to unwind a central feature of the American health insurance market.</li></ul></li></ol><h2 id="11cb7e8c-1da9-813b-86fc-c5a711bc2d2f" class="">Sources of Repayment</h2><ol type="1" id="11cb7e8c-1da9-8157-af09-e7b980032a7a" class="numbered-list" start="1"><li><span style="border-bottom:0.05em solid">Construction Phase</span>:<p id="11cb7e8c-1da9-80da-8537-f160c30bbd5e" class="">Primary: Interest payments from reserve established at closing</p><p id="11cb7e8c-1da9-80a5-b447-e3fd9a44bf7e" class="">Secondary: Net revenue from [Redacted Company Name]</p></li></ol><ol type="1" id="11cb7e8c-1da9-81b4-b8c4-d51116f9b81b" class="numbered-list" start="2"><li><span style="border-bottom:0.05em solid">Post-Construction Phase</span>: The Source Loan is being made directly to [Redacted Company Name], which will have access to all its revenues from its clinic portfolio, including its new clinic, to make debt service payments.<p id="11cb7e8c-1da9-80ed-a706-c035e6de7513" class="">Primary: Cash flow from operations across all clinic facilities, including the new clinic once it is operational. The portfolio of health clinics in the [Redacted Company Name] network benefits from diverse revenue sources, including patient services, with a large portion from [Redacted Program Name], the state version of [Redacted Program Name], along with [Redacted Program Name], third party insurance, and patient self-pay. In addition, the FQHC receives significant government grant revenue to offset the cost of services delivered to uninsured patients.</p><p id="11cb7e8c-1da9-8063-a13d-dd45f623a211" class="">Overall DSCR for the Borrower, based on all prior debt obligations including the new Source Loan, is projected to be very strong (See <a href="about:blank#appendix-c-financial-projection-of-borrower-operations">Appendix C</a>).</p><p id="11cb7e8c-1da9-8090-a9bd-f76017a93306" class="">Secondary: Capital from the Sponsor. [Redacted Company Name]&#x27;s unrestricted net assets of just under [Redacted Dollar Amount], and liquidity of [Redacted Dollar Amount], gives it the ability to pay down the debt from its own resources in the event it suffers from a cash flow interruption.</p><p id="11cb7e8c-1da9-8013-8769-eb38110b2b89" class="">Tertiary: Collateral Liquidation: The loan will be secured by a first deed of trust on the [Redacted Company Name]&#x27;s leasehold interest in the new clinic. The loan is sized to not exceed [Redacted Percentage] loan to value (LTV) based upon the independent appraisal of the to be completed clinic project. Should there be a significant interruption in patient and other revenue sources such that [Redacted Company Name] is unable to continue to service the Source Loan, the lender syndicate will have the option of liquidating the property and its equipment.</p></li></ol><h2 id="11cb7e8c-1da9-81c3-b5aa-fcfc84f81d34" class="">Collateral/LTV</h2><p id="11cb7e8c-1da9-81c8-9eae-de85dc226d6b" class="">Collateral of the Source Loan:</p><p id="11cb7e8c-1da9-81e1-9417-d6616fd32998" class="">[Redacted Company Name]&#x27;s interest in the Leverage Loan to the [Redacted Entity Name]. The Leverage Loan is secured by a pledge of the [Redacted Entity Name]&#x27;s [Redacted Percentage] membership interests in the [Redacted Entity Name]. The [Redacted Entity Name]&#x27;s assets are comprised of the [Redacted Loan Type] Loans, which are secured by a first position lien on the leasehold interest on the real estate owned by the [Redacted Entity Name].</p><h2 id="11cb7e8c-1da9-813b-96df-fd6159c741a2" class="">Rationale for Approval</h2><ol type="1" id="11cb7e8c-1da9-814d-bc6e-d8c70622ad73" class="numbered-list" start="1"><li>Solid and experienced Sponsors:<ul id="11cb7e8c-1da9-81d4-ad8f-fc57a8b3d9b6" class="bulleted-list"><li style="list-style-type:disc">Strong management team;</li></ul><ul id="11cb7e8c-1da9-81cb-97a3-c76d8ebcb336" class="bulleted-list"><li style="list-style-type:disc">Long tenure of key staff, including the CEO, and Board of Directors, with many members serving a [Redacted Time Period] or more;</li></ul><ul id="11cb7e8c-1da9-81c8-8f59-f4cfbeed9d0b" class="bulleted-list"><li style="list-style-type:disc">Mission alignment with the sponsors to create catalytic impact in underserved communities;</li></ul></li></ol><ol type="1" id="11cb7e8c-1da9-8152-9ee5-fcf3d848a223" class="numbered-list" start="2"><li>Strong operating projections and strong financials of the Sponsor:<ul id="11cb7e8c-1da9-813b-a507-fb8ab463caf1" class="bulleted-list"><li style="list-style-type:disc">Solid operating performance projections;</li></ul><ul id="11cb7e8c-1da9-8103-b5bb-fa523f9d9036" class="bulleted-list"><li style="list-style-type:disc">Projected steady cash flow generation from the [Redacted Geographic Location] supports a DSCR of at least [Redacted Number]X for the first five years of the new clinic&#x27;s operations (see <a href="about:blank#appendix-b-qalicb-financial-projections-5-years-operating-cash-flow">Appendix B</a>).</li></ul><ul id="11cb7e8c-1da9-81a4-829f-c1687e2acb8e" class="bulleted-list"><li style="list-style-type:disc">Estimated cash flow projections for all [Redacted Company Name] operations show a very strong DSCR of at least [Redacted Number]X (See <a href="about:blank#appendix-c-financial-projection-of-borrower-operations">Appendix C</a>).</li></ul><ul id="11cb7e8c-1da9-8150-b43a-d44d7a5826dc" class="bulleted-list"><li style="list-style-type:disc">Repayment and completion guarantee from the Borrower, which has an unrestricted net assets of [Redacted Dollar Amount] as of the [Redacted Year] audited financial statements.</li></ul></li></ol><ol type="1" id="11cb7e8c-1da9-8166-98d5-dcf6235955dc" class="numbered-list" start="3"><li>Collateral value of [Redacted Dollar Amount], implying an LTV ratio of just under [Redacted Percentage] as-stabilized. Any additional collateral to support a higher borrowing amount will need to meet the same [Redacted Percentage] LTV standard.</li></ol><ol type="1" id="11cb7e8c-1da9-81c1-8634-cb12c379d472" class="numbered-list" start="4"><li>Strong community impact through job creation and provision of affordable health care in a low-income community in [Redacted Geographic Location]</li></ol><ol type="1" id="11cb7e8c-1da9-81f4-9e02-e88e88f1da97" class="numbered-list" start="5"><li>Fulfillment of the deployment requirement for [Redacted Company Name]&#x27;s [Redacted Year] NMTC allocation.</li></ol><h2 id="11cb7e8c-1da9-81de-9b6e-c7019857f43a" class="">Covenants, Compliance, or Conditions for Closing – as determined by Lead Lender to include:</h2><ol type="1" id="11cb7e8c-1da9-810a-ae19-fbca2ebab3a8" class="numbered-list" start="1"><li>Receipt of audited financial statements of [Redacted Company Name] within [Redacted Time Period] at the end of each fiscal year</li></ol><ol type="1" id="11cb7e8c-1da9-817a-83f2-fe147501b6f2" class="numbered-list" start="2"><li>Audited tax returns of the [Redacted Company Name] and [Redacted Entity Name] within [Redacted Time Period] at the end of each fiscal year</li></ol><ol type="1" id="11cb7e8c-1da9-816f-bd59-e23d3975371b" class="numbered-list" start="3"><li>Annual covenant certificates for the [Redacted Company Name] and [Redacted Entity Name] within [Redacted Time Period] at the end of each fiscal year</li></ol><ol type="1" id="11cb7e8c-1da9-81dc-90b0-f85ada254268" class="numbered-list" start="4"><li>Quarterly internally prepared financial statements for the [Redacted Company Name] and [Redacted Entity Name] within [Redacted Time Period] of quarter end</li></ol><h2 id="11cb7e8c-1da9-817d-9176-e33740b76fba" class="">Risk Rating Discussion</h2><p id="11cb7e8c-1da9-8118-87f6-ee6b035d1c09" class="">Risk rating of [Redacted Number] for &quot;[Redacted Rating]&quot; based on the strong track record of [Redacted Company Name], acceptable collateral coverage and LTV, and strong repayment and completion guarantee from Borrower.</p><p id="11cb7e8c-1da9-81de-a797-c9e6aa3322e6" class="">Impact rating of [Redacted Number] for &quot;[Redacted Rating]&quot; given that this is an opportunity to provide an impactful loan that will contribute to the provision of affordable health care in a low-income community. This project is expected to create [Redacted Number] new permanent jobs, in addition to [Redacted Number] construction jobs, of which [Redacted Percentage] are expected to be held by minorities and [Redacted Percentage] to be held by low-income members of the community.</p><h2 id="11cb7e8c-1da9-81de-a3dc-e775d4a93da2" class=""><strong>But For Test</strong></h2><p id="11cb7e8c-1da9-81a3-8c45-da15ded31581" class="">[Redacted Company Name] has assembled its capital stack with NMTC subsidies, private debt, and its own capital, each of which is required to complete the [Redacted Geographic Location] clinic. The appraised value of the to be completed property was [Redacted Dollar Amount], against a total development cost of [Redacted Dollar Amount]. Without the benefit of the NMTC investment, [Redacted Company Name] would have had to place at least [Redacted Dollar Amount] in sponsor contribution to complete the [Redacted Geographic Location] clinic using conventional financing alone (netting out fees and reserves associated with NMTC funding). A capital contribution of this magnitude would compel [Redacted Company Name] to contract its future plans to develop more health clinics in the medically underserved [Redacted Geographic Location] region. Without the benefit of the NMTC subsidy, [Redacted Company Name] would be unable to proceed with this project.</p><h1 id="11cb7e8c-1da9-81bc-8599-c9fc18edde2e" class=""><strong>In Depth Analysis</strong></h1><h3 id="11cb7e8c-1da9-817e-8c65-dc97edeaa26a" class="">Location, Community Support, Community Impact</h3><p id="11cb7e8c-1da9-81c1-9468-f785883502d1" class=""><strong><span style="border-bottom:0.05em solid">Location</span></strong></p><p id="11cb7e8c-1da9-81dd-a00b-edc5d017e7fc" class="">[Redacted City] is a small city about an hour and a half drive east of [Redacted City], [Redacted State], with a population of [Redacted Number]. It a predominantly farm-working community where English is commonly learned as second language. [Redacted Percentage] of the population is below the age of [Redacted Number] and only [Redacted Percentage] of residents have a bachelor&#x27;s degree. It is considered medically underserved, with a poverty rate of [Redacted Percentage], median family income of just under [Redacted Dollar Amount], and an unemployment rate of [Redacted Percentage].</p><p id="11cb7e8c-1da9-815f-a683-c1c7ec6ed9d5" class=""><strong><span style="border-bottom:0.05em solid">Community Support</span></strong></p><p id="11cb7e8c-1da9-8113-a4de-e2fa1e41f241" class="">The [Redacted City] [Redacted Company Name] Health Center has the support of the City of [Redacted City] and various other local, regional, and state level partners. [Redacted Company Name] participated in the [Redacted County] Community Health Improvement Plan (CHIP), that was completed in collaboration with the [Redacted County] Department of Public Health and serves as a blueprint for collective action to address health disparities and promote health in [Redacted County]. The CHIP noted that community members voted access to medical care as a top issue and discussed this matter in relation to every health condition. Since this clinic will bring new health care resources to [Redacted County], local support has been very strong, including the City of [Redacted City], and other local, regional and state partners. A letter of support from [Redacted State] Assemblymember [Redacted Name], representing the [Redacted County] district, is attached, along with support letters form [Redacted Company Name] and [Redacted Company Name].</p><p id="11cb7e8c-1da9-81c9-8f3b-ccfa4b487b64" class="">[Redacted Company Name] has been working in [Redacted County] to increase awareness around services and access to quality care for low-income residents. It has developed a partnership with [Redacted University], one of the newest and fastest growing of the [Redacted University System] campuses. [Redacted Company Name] recently developed the [Redacted Program Name] (Health Promoters) program in [Redacted County] to conduct in-home assessments, covering topics such as asthma triggers, environmental control, medication review, and assessment and monitoring. This approach empowered individuals to confidently manage their asthma, a recurrent problem with residents of [Redacted Geographic Region] due to the high use of pesticides. Throughout the program, [Redacted Program Name] engaged with participants via virtual visits, phone calls, and eventually in-person sessions as COVID restrictions eased. Participants were surveyed before and after the educational intervention to measure the program&#x27;s impact. The pilot&#x27;s success led to an invitation to present their findings at the [Redacted Year] [Redacted Conference Name] conference in [Redacted City].</p><p id="11cb7e8c-1da9-81f6-b21e-caa35dfc188f" class=""><strong><span style="border-bottom:0.05em solid">Community Impact</span></strong></p><p id="11cb7e8c-1da9-8189-8a5b-d067c828d92a" class="">As a community-based healthcare provider, Camarena Health has a mission to create and promote access to health care. It believes their health programs make meaningful changes in the health of individuals, families, and neighborhoods across the Central Valley.</p><p id="11cb7e8c-1da9-81e9-b26f-cb0928617c5f" class="">The [Redacted Company Name] clinic will be [Redacted Company Name]&#x27;s first in [Redacted County] County, located just adjacent to [Redacted County] and [Redacted County] counties where [Redacted Company Name] has its current clinics. [Redacted County] County faces significant healthcare challenges. Compared to the rest of [Redacted State], the region has significantly higher rates of all-cause mortality, chronic diseases (including heart disease, diabetes, and asthma), psychological distress, and other societal health issues such as teen pregnancies. These problems are made worse by the healthcare shortage in the region, which has earned the region a designation as a Medically Underserved Area (MUA) and Health Professional Shortage Areas (HPSA). The closure in [Redacted Date] of [Redacted Hospital Name] has added significantly to the health care needs in the region.</p><p id="11cb7e8c-1da9-81ce-b864-ce5ae90127d2" class="">[Redacted County] County recently ranked [Redacted Number] out of [Redacted Number] [Redacted State] counties on Primary Care Physician (PCP) to patient ratio. The [Redacted County] County rate of Primary Care Physicians per [Redacted Number] residents ([Redacted Number]) is only about [Redacted Percentage] of the rate of [Redacted State] ([Redacted Number]), or the US as a whole ([Redacted Number]). Like much of the [Redacted Geographic Region], [Redacted County] County is heavily [Redacted Demographic], a population with relatively high rates of health challenges and low access to health insurance.</p><p id="11cb7e8c-1da9-8197-96b4-e824d9f827f1" class="">The [Redacted City] clinic will serve over [Redacted Number] unique community members ([Redacted Percentage] Minority, [Redacted Percentage] Low-Income) through various health programs, and provide over [Redacted Number] patient medical visits annually. The clinic will allow [Redacted Company Name] to better assist patients access specialty care both on-site and in the community. Set on two floors, the clinic building will feature flexible and conference space to be utilized by other medical service providers in the community and for various community programming events, diabetes classes, healthy eating, nutrition, and educational programming. [Redacted Company Name] will also use the clinic to expand upon existing community partnerships with the [Redacted University Name]; [Redacted Organization Name] (the local [Redacted Program Name] heath plan); private [Redacted Geographic Region] agricultural companies such as [Redacted Company Name] which employ farmworkers throughout the [Redacted Geographic Region].</p><p id="11cb7e8c-1da9-8169-977a-d1d6a5108da2" class=""><strong><span style="border-bottom:0.05em solid">Needs Assessment – [Redacted City]</span></strong></p><p id="11cb7e8c-1da9-8190-883e-c43f86fe7977" class="">[Redacted Company Name] relied on two studies to assess the demand for its services in the [Redacted City] area. The first was prepared by [Redacted Company Name] in [Redacted Year], and the second was prepared by [Redacted Company Name], a large hospital network in [Redacted State], in [Redacted Year]. Both assessments showed strong unmet health care needs in [Redacted City] and [Redacted County] County.</p><p id="11cb7e8c-1da9-81e1-90e5-f23f078dfa61" class="">A snapshot of [Redacted Company Name]&#x27;s payor mix compared to the health needs assessment data conducted in [Redacted Year] for [Redacted City], when [Redacted Company Name] initiated its due diligence and planning for the new clinic. This data reveals the strong projected demand for health and dental services at the new clinic, based on the mix of insurance payors plus uninsured patients that would be covered by subsidies from the [Redacted Government Department]:</p><p id="11cb7e8c-1da9-8095-ae45-d327422b8da7" class="">[Redacted graphic]</p><p id="11cb7e8c-1da9-812f-a6a8-f4370803de53" class=""><strong><span style="border-bottom:0.05em solid">Economic Development – Job Creation</span></strong></p><p id="11cb7e8c-1da9-813e-ac3e-dac3ffa1c15c" class="">The [Redacted City] clinic is projected to create [Redacted Number] full time jobs that are high wage health care positions. During construction of the clinic, [Redacted Number] full-time jobs are projected.</p><p id="11cb7e8c-1da9-8195-8d46-c2ffa7dfdab5" class="">Of the construction jobs, [Redacted Percentage] are expected to be filled by low-income people or residents of the low-income community, and [Redacted Percentage] are expected to be filled by minorities. In addition, [Redacted Percentage] of the construction subcontractors are expected to be minority owned or controlled.</p><p id="11cb7e8c-1da9-81c9-a041-da5891e3dae5" class="">For the permanent jobs, [Redacted Company Name] anticipates nearly all positions will be accessible to those that face barriers to employment—including the disabled, formerly/currently homeless, and formerly incarcerated. They are projecting approximately [Redacted Percentage] of the jobs will be accessible.</p><p id="11cb7e8c-1da9-809a-ba35-c2f727e4eeb0" class="">[Redacted graphic]</p><p id="11cb7e8c-1da9-81ca-afe8-c81c2150c219" class="">The chart below contains details of the type of positions the clinic will create and the pay scale for each position. In addition to salary, employees of the clinic receive a range of benefits, including paid time off, sick leave, medical and dental insurance, life and long-term disability insurance, educational reimbursements, and a retirement program.</p><p id="11cb7e8c-1da9-80fd-9195-c69ca531d105" class="">[Redacted graphic]</p><h3 id="11cb7e8c-1da9-81f8-bf22-ed97afcb54b5" class="">Sponsor, General Contractor, and Construction Monitor Background</h3><p id="11cb7e8c-1da9-81e9-9fc1-ee54c7e0c5c2" class=""><strong><span style="border-bottom:0.05em solid">Background on the Sponsor</span></strong></p><p id="11cb7e8c-1da9-8186-a684-eeb61e9ad25a" class="">[Redacted Company Name] has a seasoned executive team, including [Redacted Name], its CEO, and Dr. [Redacted Name], its Chief Medical Officer. The CEO has been at [Redacted Company Name] for [Redacted Number] years, and CEO since [Redacted Year]. He has a master&#x27;s in health administration. The Chief Medical Officer has served since [Redacted Year] and has worked in other several other clinical settings; he received his medical degree from [Redacted University] and his MBA from [Redacted University]. The clinic is overseen by an [Redacted Number]-member board of directors. The board&#x27;s president is [Redacted Name], who has a doctor&#x27;s degree in education and is the [Redacted County] Superintendent of Schools.</p><p id="11cb7e8c-1da9-81c6-9461-c75e6da4b12a" class="">The core development team, including the project architect, general contractor, and construction oversight, is being assembled and details will be provided. [Redacted Company Name] will assess the qualifications of the development team and will require full approval of the team&#x27;s qualifications as a condition of closing.</p><p id="11cb7e8c-1da9-81e8-b3f3-c189123273cc" class=""><span style="border-bottom:0.05em solid">Background on the General Contractor (GC)</span></p><p id="11cb7e8c-1da9-814a-94d1-fb5393be7d30" class="">[Redacted Company Name] is a Minority Business Enterprise (MBE) that has extensive experience in construction of medical facilities like the proposed Project. Of the [Redacted Number] projects disclosed by the GC, [Redacted Number] are for [Redacted Company Name] facilities, but all [Redacted Number] are for medical facilities, with contract amounts varying from [Redacted Dollar Amount] to [Redacted Dollar Amount]. Current work under contract totals [Redacted Dollar Amount], with [Redacted Dollar Amount] remaining to be completed. [Redacted Company Name] reports that [Redacted Company Name] has been their contractor firm of choice for many years, completing clinics and medical office buildings for [Redacted Company Name], all on time and within budget. Over the last [Redacted Number] years, [Redacted Company Name] has performed an average of [Redacted Dollar Amount] in work per year. [Redacted Company Name]&#x27;s contract is a Guaranteed Maximum Price (GMP) contract, ensuring that cost escalation will be the risk to the GC, not [Redacted Company Name].</p><p id="11cb7e8c-1da9-8122-92f7-fa1e4cfd33c7" class="">[Redacted Company Name] has requested that the typical GC bonding requirement be waived for [Redacted Company Name], due to its high cost. In lieu of the bond, [Redacted Company Name]&#x27;s owner, [Redacted Name] and [Redacted Name], have agreed to guarantee the GMP from [Redacted Company Name] to [Redacted Company Name]. Financial statements received form the [Redacted Name]&#x27;s indicate assets of [Redacted Dollar Amount], and net worth of [Redacted Dollar Amount]. [Redacted Company Name] in turn has a full completion guarantee in favor of the source lenders.</p><p id="11cb7e8c-1da9-8144-9c29-e19edcaa7f39" class=""><span style="border-bottom:0.05em solid">Background on Disbursement Agent: [Redacted Company Name]</span></p><p id="11cb7e8c-1da9-81db-b73d-fdc22d574267" class="">[Redacted Company Name] is to be the disbursement agent for the construction draws. [Redacted Company Name] has not participated in a debt transaction with [Redacted Company Name] but has taken part in NMTC transactions as co-CDE&#x27;s in [Redacted Year] in the [Redacted Project Name] in [Redacted City]. They are a well-regarded CDFI bank with a focus on impact and community lending.</p><p id="11cb7e8c-1da9-81f1-9a85-cbf95efe2f3d" class="">In [Redacted Year], [Redacted Company Name], N.A. merged with [Redacted Company Name], in [Redacted City] to become the largest and first Black-led Minority Depository Institution with over [Redacted Dollar Amount] in total assets and over [Redacted Dollar Amount] in total deposits. [Redacted Company Name] is an eight-time awardee and one of the handful of regulated banks with New Markets Tax Credit authority. With this funding [Redacted Company Name] has financed more than [Redacted Number] high-impact catalytic projects. It also received a [Redacted Dollar Amount] in ECIP funding in [Redacted Year], and is in a strong financial position (see <a href="about:blank#_APPENDIX_G_%E2%80%93CITY">Appendix G</a> for [Redacted Company Name]&#x27;s financials).</p><h3 id="11cb7e8c-1da9-8132-ba3f-d311ca005b02" class="">Financial Analysis</h3><h3 id="11cb7e8c-1da9-8125-b78d-d6f122a66893" class=""><span style="border-bottom:0.05em solid">Financial Analysis of the Project and Clinic Operations</span></h3><p id="11cb7e8c-1da9-814c-8a46-c1960f13445a" class="">[Redacted Company Name] analyzed the pro forma projections for both the sponsor, [Redacted Company Name], and the QALICB clinic in order to assess viability of both entities to service their debt obligations. As set forth in Appendix B, the DSCR for the stand-alone clinic is projected to be at least [Redacted Number]X from [Redacted Year] through [Redacted Year] (See Appendix B). The QALICB is projected to generate [Redacted Dollar Amount] in total revenue by the first full year of operations (Year 2) and increase to [Redacted Dollar Amount] by Year 10. Other than the first year when the clinic will not yet be fully on-line, the projections show positive net operating income for the life of our Source Loan. NOI for the clinic is projected to increase from [Redacted Dollar Amount] in Year 2 to [Redacted Dollar Amount] in Year 10, with the debt service coverage increasing from [Redacted Number]X to [Redacted Number]X.</p><p id="11cb7e8c-1da9-81e9-8b11-dce40271f6b1" class="">The sponsor&#x27;s debt obligations from all sources, including this new debt, are shown in the projections.</p><h3 id="11cb7e8c-1da9-811e-9744-e13e08865113" class=""><span style="border-bottom:0.05em solid">Financial Analysis of the Sponsor</span></h3><p id="11cb7e8c-1da9-8129-85ba-ddb6315e043e" class="">A review of the sponsor&#x27;s audited financial statements from [Redacted Year] to [Redacted Year] shows significant financial strength, with annual revenues of over [Redacted Dollar Amount] per the YE [Redacted Year] audit, and a net assets of [Redacted Dollar Amount]. Like nearly all health clinics that serve the poor, a large portion of its income is from [Redacted Government Program] and [Redacted Government Program], and given its mission and nonprofit status, the sponsor&#x27;s net revenue after expenses is relatively low given the size of the organization, at [Redacted Dollar Amount] of net income in [Redacted Year]. However, its liquidity is strong with [Redacted Dollar Amount] in cash and short-term investments. The sponsor is contributing [Redacted Dollar Amount] of its own leverage. Please see the detailed discussion in Appendix C.</p><p id="11cb7e8c-1da9-81b4-b683-efe476f3b6d0" class="">A review of the sponsor&#x27;s consolidated projections shows a realistic outlook for the next [Redacted Number] years, and supported by reasonable assumptions. The sponsor based the projections on estimating utilization metrics for the first and second years, considering encounters, duplicated patients, and unique patients served. These estimates are derived from current encounter/patient ratios from other Sponsor-operated sites and historical visit utilizations. To assess the economics and productivity, the borrower refers to historical data of start-ups and existing sites with similar service lines and patient demographics. The total income is projected to steadily increase from [Redacted Dollar Amount] in [Redacted Year] to [Redacted Dollar Amount] in [Redacted Year], with an average annual growth rate of [Redacted Percentage]. The total expenses also increase over the [Redacted Number]-year period, reaching [Redacted Dollar Amount] in [Redacted Year], with an average annual increase of [Redacted Percentage]. Despite increasing expenses, net income remains consistently positive, ranging from [Redacted Dollar Amount] in [Redacted Year] to [Redacted Dollar Amount] in [Redacted Year]. The Debt Service Coverage Ratio (DSCR) is strong, starting at [Redacted Number]x in [Redacted Year], falling to [Redacted Number]X as the [Redacted Company Name] clinic operations ramp up, and climbing to [Redacted Number]x in [Redacted Year]. Additionally, there is a surplus after debt service, ranging from [Redacted Dollar Amount] in [Redacted Year] to [Redacted Dollar Amount] in [Redacted Year]. Overall, these projections demonstrate a positive financial outlook for [Redacted Company Name], and very low credit risk for [Redacted Company Name].</p><h2 id="11cb7e8c-1da9-8125-9946-ca1179e2f6d6" class="">TABLE OF CONTENTS</h2><p id="11cb7e8c-1da9-81b0-9cb7-fc771c0a6607" class=""><a href="about:blank#a-diagram-of-a-house-description-automatically-generatedappendix-a-nmtc-structure">APPENDIX A – NMTC STRUCTURE 15</a></p><p id="11cb7e8c-1da9-8159-9599-c391f83c50e1" class=""><a href="about:blank#appendix-b-qalicb-financial-projections-5-years-operating-cash-flow">APPENDIX B –QALICB FINANCIAL PROJECTIONS – 5 YEARS OPERATING CASH FLOW 18</a></p><p id="11cb7e8c-1da9-81a1-a869-f10a1a465d47" class=""><a href="about:blank#appendix-c-financial-projection-of-borrower-operations">APPENDIX C – FINANCIAL PROJECTION OF BORROWER OPERATIONS 19</a></p><p id="11cb7e8c-1da9-81da-bbb6-f9ea462d7841" class=""><a href="about:blank#appendix-d-scenario-analysis-tables">APPENDIX D – SCENARIO ANALYSIS TABLES 21</a></p><p id="11cb7e8c-1da9-81c8-8522-ee8b5eb16c66" class=""><a href="about:blank#appendix-e-management-board-biographies">APPENDIX E – MANAGEMENT &amp; BOARD BIOGRAPHIES 22</a></p><p id="11cb7e8c-1da9-810e-94e1-ca484fdff45e" class=""><a href="about:blank#appendix-f-appraisal-summary">APPENDIX F – APPRAISAL SUMMARY 27</a></p><p id="11cb7e8c-1da9-81f8-b5a1-dae8736ab512" class=""><a href="about:blank#appendix-g-city-first-key-financial-metrics">APPENDIX G –CITY FIRST– KEY FINANCIAL METRICS 29</a></p><p id="11cb7e8c-1da9-811e-9e86-d78c0306f483" class=""><a href="about:blank#appendix-h-credit-risk-rating-grid">APPENDIX H –CREDIT RISK RATING GRID 32</a></p><h1 id="11cb7e8c-1da9-8142-aca8-daf5a85934be" class="">APPENDIX A – NMTC STRUCTURE</h1><p id="11cb7e8c-1da9-805e-9944-d154d966c0ac" class="">[Redacted graphic]</p><ol type="1" id="11cb7e8c-1da9-8172-a703-c62cb45b4263" class="numbered-list" start="1"><li>Total project cost is [Redacted Dollar Amount]. The capital stack of the NMTC structure is given below:</li></ol><ol type="1" id="11cb7e8c-1da9-8139-a7fe-d76c8b489938" class="numbered-list" start="2"><li><span style="border-bottom:0.05em solid">Source Loan</span>: [Redacted Company Name] is underwriting a Source Loan of [Redacted Dollar Amount] to [Redacted Company Name]. A larger loan amount is being considered of [Redacted Dollar Amount] based on the potential of additional collateral being committed by [Redacted Company Name]. The diagram above shows the [Redacted Dollar Amount] in Source Loan rather than the [Redacted Dollar Amount] currently in underwriting at [Redacted Company Name]. Of the total senior loan amount, [Redacted Company Name] will participate in the amount of [Redacted Dollar Amount] and sub participate [Redacted Dollar Amount] to [Redacted Company Name]. All financial projections show the higher Source Loan amount of [Redacted Dollar Amount].</li></ol><ol type="1" id="11cb7e8c-1da9-8124-9266-e0a856d64b98" class="numbered-list" start="3"><li><span style="border-bottom:0.05em solid">Leverage Loan</span>: As shown in the diagram above, [Redacted Company Name] will use the proceeds from the [Redacted Dollar Amount] Source Loan, [Redacted Dollar Amount] of its own cash on hand, plus [Redacted Dollar Amount] of prior incurred cost to make a [Redacted Dollar Amount] Leverage Loan to the Investment Fund.</li></ol><ol type="1" id="11cb7e8c-1da9-81b9-8ee1-dbf1fe08f88f" class="numbered-list" start="4"><li><span style="border-bottom:0.05em solid">One Day Loan</span>: In order to monetize a portion of the [Redacted Dollar Amount] of prior incurred cost, [Redacted Company Name] will make a One Day Loan in the amount of [Redacted Dollar Amount] to [Redacted Company Name], which will repay this amount one day after closing. The remainder of costs incurred to date, in the amount of [Redacted Dollar Amount], will flow directly to the QALICB as contributed costs.</li></ol><ol type="1" id="11cb7e8c-1da9-8174-96b0-f982d7bdf8d6" class="numbered-list" start="5"><li><span style="border-bottom:0.05em solid">NMTC Equity</span>: [Redacted Company Name] will serve as the NMTC Equity Investor, providing the NMTC equity to the Investment Fund at a price of [Redacted Dollar Amount] for each credit (generating [Redacted Dollar Amount] in tax credit proceeds).</li></ol><ol type="1" id="11cb7e8c-1da9-818e-9074-ce29d76d3f45" class="numbered-list" start="6"><li><span style="border-bottom:0.05em solid">Qualified Equity Investment</span> (&quot;QEI&quot;): The Investment Fund will have [Redacted Dollar Amount] in cash at closing. Of this, [Redacted Dollar Amount] will be allocated to the [Redacted Company Name] Sub-CDE after paying a NMTC sponsor fee of [Redacted Dollar Amount] ([Redacted Percentage] of [Redacted Dollar Amount]) at the investment fund level.</li></ol><ol type="1" id="11cb7e8c-1da9-81c9-a42d-eca0e1d444a9" class="numbered-list" start="7"><li><span style="border-bottom:0.05em solid">Qualified Low Income Community Investments</span> (&quot;QLICIs&quot;): The Sub-CDEs subsequently make QLICI loans to the QALICB. [Redacted Company Name]&#x27;s Sub CDE will make a QLICI of ([Redacted Dollar Amount]) after paying the upfront fee of [Redacted Dollar Amount] to [Redacted Company Name] ([Redacted Percentage] of QEI). Other Sub-CDEs will also make QLICIs to the QALICB after being paid their respective fees. A total of [Redacted Dollar Amount] represents the QLICI debt to the QALICB from each CDE. These loans are being split into three components under each Sub-CDE lender, the first representing the Source Loan, the second representing the balance of the leverage loan contributed by the sponsor, and the third representing the [Redacted Company Name] equity contribution (all net of CDE fees).</li></ol><p id="11cb7e8c-1da9-816a-9750-dc60d2b9fb1d" class=""><strong>Sources and Uses</strong></p><p id="11cb7e8c-1da9-8051-93fe-c866d0cc9ef3" class="">[Redacted table]</p><h1 id="11cb7e8c-1da9-817f-ae67-d76ef472b09c" class="">APPENDIX B –QALICB FINANCIAL PROJECTIONS – 5 YEARS OPERATING CASH FLOW</h1><p id="11cb7e8c-1da9-802d-a6c0-e428f840e4af" class="">[Redacted table]</p><ul id="11cb7e8c-1da9-81f0-880e-cbde4e9e3faa" class="bulleted-list"><li style="list-style-type:disc">The new clinic set up at [Redacted City] is expected to generate around [Redacted Dollar Amount] in its 1st full year of operations with an increasing trend as the clinic continues to ramp up medical and dental services to the community.</li></ul><ul id="11cb7e8c-1da9-8105-8e8a-ee7e1b868c38" class="bulleted-list"><li style="list-style-type:disc">DSCR for the 1st year of operations does not meet the repayments of loan obligations but the cashflow from [Redacted Company Name]&#x27;s other [Redacted Number] clinics will be more than sufficient to make debt payments. [Redacted Company Name] plans to subsidize the first few years of the [Redacted City] clinic operations and has the resources to do so.</li></ul><h1 id="11cb7e8c-1da9-8128-a34f-d1c112b00183" class="">APPENDIX C – FINANCIAL PROJECTION OF BORROWER OPERATIONS</h1><p id="11cb7e8c-1da9-80b6-8328-ee271de00df3" class="">[Redacted tabled]</p><p id="11cb7e8c-1da9-81da-b049-cb2a0a28f9fb" class=""><strong>Income Projections</strong></p><ul id="11cb7e8c-1da9-8142-b258-ceb64e36768e" class="bulleted-list"><li style="list-style-type:disc">The [Redacted Company Name] prepared the projections by first estimating utilization metrics for the first year and second year. It does this by estimating encounters, duplicated patients and unique patients served. These estimates were derived from current encounter/patient ratios from other sites it operates, from both medical and dental patient visits.</li></ul><ul id="11cb7e8c-1da9-81b0-9a11-c8ce3b3449db" class="bulleted-list"><li style="list-style-type:disc">In terms of economics and productivity of the utilization, the borrower estimates revenues and expenses by looking at historical data of start-ups as well as existing sites of similar service lines and patient demographics. The [Redacted City] facilities will provide a unique service mix, and so the estimates are a composite of two comparable locations that are adjusted based on size of patient census and number of rooms for services.</li></ul><ul id="11cb7e8c-1da9-8140-b206-fdbc51ce483f" class="bulleted-list"><li style="list-style-type:disc">Total income starts at a total of [Redacted Dollar Amount] in [Redacted Year] and increases over all [Redacted Number] years to [Redacted Dollar Amount] in [Redacted Year]. Income increases year over year at an average of [Redacted Percentage].</li></ul><ul id="11cb7e8c-1da9-8117-bd33-caddae8c02ed" class="bulleted-list"><li style="list-style-type:disc">Total expense starts at a total of [Redacted Dollar Amount] in [Redacted Year] and increases overall [Redacted Number] years to [Redacted Dollar Amount] in [Redacted Year]. As a percentage of income, expenses average at around [Redacted Percentage]. Total Expense increases year over year over all years at an average of [Redacted Percentage], with a high of [Redacted Percentage] in [Redacted Year], representing the first full expense year at the [Redacted City] clinic.</li></ul><ul id="11cb7e8c-1da9-8183-8f2a-cc9fd13c20c4" class="bulleted-list"><li style="list-style-type:disc">Net income is consistently positive in all years projected, ranging from [Redacted Dollar Amount] in [Redacted Year] to [Redacted Dollar Amount] in [Redacted Year]. As a percentage of Total Income, Net Income ranges from [Redacted Percentage] in [Redacted Year] to [Redacted Percentage] in [Redacted Year]. Year over year changes for Net Income is not consistently positive, varying from negative [Redacted Percentage] in [Redacted Year], reflecting the ramp-up period at the [Redacted City] clinic, to positive [Redacted Percentage] in [Redacted Year].</li></ul><p id="11cb7e8c-1da9-8194-9638-e99760b5f928" class=""><strong>Cash EBIDA</strong></p><ul id="11cb7e8c-1da9-81ec-9235-c60fad11d783" class="bulleted-list"><li style="list-style-type:disc">Earnings before Interest, Depreciation, and Amortization (EBIDA) is calculated in order to calculate DSCR. The following addbacks are made to arrive at Cash EBIDA:<ul id="11cb7e8c-1da9-81cb-8270-e7779c7c90f6" class="bulleted-list"><li style="list-style-type:circle">Depreciation</li></ul><ul id="11cb7e8c-1da9-81a3-9426-fef9d3e669f7" class="bulleted-list"><li style="list-style-type:circle">Pre-existing mortgage interest expense</li></ul><ul id="11cb7e8c-1da9-81d6-aba4-fa2efac4af02" class="bulleted-list"><li style="list-style-type:circle">and Projected debt expense for [Redacted City] facility loans</li></ul></li></ul><ul id="11cb7e8c-1da9-81c4-ad85-c2b372f3e3eb" class="bulleted-list"><li style="list-style-type:disc">After the addbacks, EBIDA ranges from [Redacted Dollar Amount] in [Redacted Year] to [Redacted Dollar Amount] in [Redacted Year], showing strong consistent net cash flow.</li></ul><p id="11cb7e8c-1da9-81f1-a346-d229ec81cecf" class=""><strong>Debt Service</strong></p><ul id="11cb7e8c-1da9-816c-a974-f5f0ee1bfeae" class="bulleted-list"><li style="list-style-type:disc">Total debt service is calculated by taking the sum of the pre-existing mortgage interest expense and the projected interest expense for [Redacted City].</li></ul><ul id="11cb7e8c-1da9-815a-b5cd-c5425dac6245" class="bulleted-list"><li style="list-style-type:disc">Total debt service ranges from ranges from [Redacted Dollar Amount] in [Redacted Year] to [Redacted Dollar Amount] in [Redacted Year].</li></ul><p id="11cb7e8c-1da9-8120-b790-dcbd99a4ff72" class=""><strong>Debt Service Coverage Ratio (DSCR)</strong></p><ul id="11cb7e8c-1da9-8186-8271-fa02e4191f3c" class="bulleted-list"><li style="list-style-type:disc">Enterprise-wide DSCR is strong with a low of [Redacted Number]x in [Redacted Year] and a high of [Redacted Number]x in [Redacted Year].</li></ul><ul id="11cb7e8c-1da9-8175-adcf-df82f8b6cf67" class="bulleted-list"><li style="list-style-type:disc">Surplus after debt service is consistently positive ranging from [Redacted Dollar Amount] in [Redacted Year] to [Redacted Dollar Amount] in [Redacted Year].</li></ul><h1 id="11cb7e8c-1da9-81dc-999a-c915fb27a954" class="">APPENDIX D – SCENARIO ANALYSIS TABLES</h1><p id="11cb7e8c-1da9-81e0-9b30-dd1059029b3c" class="">The forecast above depicts operating cash flow and debt service coverage if projected incomes were lower than projected and projected expenses were higher than projected. To represent that potential, incomes were stressed, and expenses were increased to a point of breakeven coverage of 1.0x in Year 3, [Redacted Year] (the year with the lowest debt service coverage in the borrower&#x27;s projections).</p><p id="11cb7e8c-1da9-819d-93e1-ef103b933285" class="">For breakeven coverage to be attained, income in [Redacted Year] can be lowered by [Redacted Percentage] while simultaneously expenses can be increased by [Redacted Percentage]. The lower coverage in [Redacted Year] reflects the difference in growth rates between incomes and expenses after [Redacted Year] set by the Sponsor and the stresses and increases on income and expenses set by [Redacted Company Name] underwriting. Given [Redacted Company Name]&#x27;s historically strong track record, it is very unlikely that [Redacted Company Name] will experience five consecutive years of undershooting revenue targets and simultaneously overshooting expense budgets, each by more than [Redacted Percentage].</p><p id="11cb7e8c-1da9-817e-a7ac-db9535161dac" class="">The sensitivity table below demonstrates the variability available among the varying degrees of income stress and expense increase while remaining above 1.0x coverage following [Redacted Year].</p><p id="11cb7e8c-1da9-8069-85c6-fca6eb35532d" class="">[Redacted chart]</p><h1 id="11cb7e8c-1da9-81aa-bdae-cec7b9a2f9fc" class="">APPENDIX E – MANAGEMENT &amp; BOARD BIOGRAPHIES</h1><p id="11cb7e8c-1da9-81f8-be50-d598a3289dbd" class="">[Redacted Company Name] has strong and highly experienced leadership, including its executive team and board of directors.</p><p id="11cb7e8c-1da9-8107-a10c-ec3861ef1316" class=""><strong>[Redacted Name]</strong> is their CEO, where he has served since [Redacted Year]. He joined [Redacted Company Name] in [Redacted Year] as Chief Operations Officer. He has also worked at [Redacted Company Name] and [Redacted Company Name] in [Redacted City], [Redacted State], and started his career in health care administration at [Redacted Company Name] in [Redacted City], [Redacted State]. [Redacted Name] is on the board at the [Redacted Organization Name] and the [Redacted Organization Name].</p><p id="11cb7e8c-1da9-8151-af7a-ec9e46f39348" class=""><strong>[Redacted Name]</strong> has served as [Redacted Company Name]&#x27;s chief medical officer since [Redacted Year]. Prior to joining [Redacted Company Name] he was associate medical director at [Redacted Company Name] in [Redacted City], [Redacted State], and worked for the [Redacted Company Name] in [Redacted City] and [Redacted Company Name] in [Redacted City]—all communities in [Redacted Region]. Dr. [Redacted Name] received his medical training at the [Redacted University Name] and did his residency in family medicine at [Redacted Company Name] in [Redacted City]. He also has a master&#x27;s in business administration from the [Redacted University Name].</p><p id="11cb7e8c-1da9-8140-844a-ebd4f880497f" class=""><strong>[Redacted Name]</strong> is [Redacted Company Name]&#x27;s Chief Financial Officer, a role she has held since [Redacted Month] of [Redacted Year]. Prior to that she has held roles of increasing responsibility, starting in [Redacted Year], in the financial operations of [Redacted Company Name]. She has a degree in business administration from [Redacted University Name] in [Redacted City].</p><p id="11cb7e8c-1da9-817a-bf6c-ef9cb1396032" class=""><strong>[Redacted Name]</strong> is [Redacted Company Name]&#x27;s Chief Operations Officer. She has held this role since [Redacted Year]. Her prior roles have included program director at [Redacted Company Name], Executive Director at [Redacted Company Name], and senior analyst at the [Redacted Organization Name]. She received her bachelors and master&#x27;s in business administration at [Redacted University Name] at [Redacted City].</p><p id="11cb7e8c-1da9-814b-80cf-f26c49727639" class=""><strong>[Redacted Name]</strong> is Chief Human Resources Officer at [Redacted Company Name], a role he has held since [Redacted Year]; he has worked in human resources at [Redacted Company Name] since [Redacted Year]. He held prior human resources positions at the [Redacted Company Name] and [Redacted Company Name].</p><p id="11cb7e8c-1da9-8142-810d-d5cfab319ce2" class="">A majority of the staff at [Redacted Company Name] are [Redacted Ethnicity], and many are bilingual in [Redacted Language] and [Redacted Language], reflecting the [Redacted Region] population they serve.</p><p id="11cb7e8c-1da9-8160-8e44-e5d207ad7dba" class="">The Board of Directors has [Redacted Number] members. Dr. [Redacted Name] is the board president. She is the Superintendent at the [Redacted Organization Name], and she has served on [Redacted Company Name]&#x27;s board since [Redacted Year]. [Redacted Name] is the board&#x27;s Vice President; she is a registered nurse and has served on the board since [Redacted Year]. [Redacted Name] is the board&#x27;s Secretary; she is a retired employee of the state of [Redacted State]. [Redacted Name] is the board&#x27;s Treasurer; he is an owner of an insurance agency. [Redacted Name] is the past president of the board; he is a migrant education supervisor and teacher. The board is well represented by minority groups, [Redacted Percentage] of which are minority, and its Foundation Board of Directors is comprised of members that are [Redacted Percentage] minority.</p><h1 id="11cb7e8c-1da9-8131-bb0c-c11a15cb05ba" class=""><strong>APPENDIX G – FINANCIAL ANALYSIS- SPONSOR AUDITS</strong></h1><p id="11cb7e8c-1da9-81a0-8a94-d68b818fbe7a" class="">The following analysis is based on audited financial statements for [Redacted Company Name] covering the fiscal years ending December 31, [Redacted Year] and [Redacted Year]. The audits were prepared by [Redacted Company Name] (Healthcare Audit, Tax &amp; Consulting Services).</p><p id="11cb7e8c-1da9-817f-b6c7-c0cf4319e755" class=""><strong><span style="border-bottom:0.05em solid">Income Statement</span></strong></p><p id="11cb7e8c-1da9-8037-9146-fb7870d79da4" class="">[Redacted table]</p><p id="11cb7e8c-1da9-813a-86f5-f592c2759282" class=""><em><span style="border-bottom:0.05em solid">Revenues:</span></em></p><ul id="11cb7e8c-1da9-81dd-9857-cdeb9eef01da" class="bulleted-list"><li style="list-style-type:disc">[Redacted Company Name] has seen steady revenue growth of about [Redacted Percentage] over the past three years, driven by increases in patient service revenue and grant revenue.</li></ul><ul id="11cb7e8c-1da9-81ec-9cba-c8824fa0e70a" class="bulleted-list"><li style="list-style-type:disc">There is fluctuation observed in the grant revenues and other income, which is due to uncertainty of timelines. These revenues are provided from both federal and state health care systems.</li></ul><ul id="11cb7e8c-1da9-815d-af5a-e3efa461def1" class="bulleted-list"><li style="list-style-type:disc">Grant revenues have almost doubled in the last [Redacted Number] years.</li></ul><p id="11cb7e8c-1da9-810b-98dc-d69bec0624d5" class=""><em><span style="border-bottom:0.05em solid">Expenses:</span></em></p><ul id="11cb7e8c-1da9-8172-ab3e-ccb3584e917b" class="bulleted-list"><li style="list-style-type:disc">[Redacted Company Name] has seen an approximately [Redacted Percentage] increase in its expenses each year with salaries and employee benefits as the largest expense contributors.</li></ul><ul id="11cb7e8c-1da9-81da-9e17-d147f8b58f4f" class="bulleted-list"><li style="list-style-type:disc">There is a sudden jump observed in contract medical services, professional fees and travel, due to the addition of workforce as [Redacted Company Name] expands its clinic locations.</li></ul><ul id="11cb7e8c-1da9-8109-a8e7-f76cb5ff970e" class="bulleted-list"><li style="list-style-type:disc">There has been continuous investment in building and equipment to accommodate growth.</li></ul><p id="11cb7e8c-1da9-8181-99cb-c8f942b7876a" class=""><em><span style="border-bottom:0.05em solid">Profitability:</span></em></p><ul id="11cb7e8c-1da9-811a-be4d-d72e2f628437" class="bulleted-list"><li style="list-style-type:disc">Over the past four years, [Redacted Company Name] has operated at an average [Redacted Percentage] net margin.</li></ul><ul id="11cb7e8c-1da9-813a-afb1-d10354daccf9" class="bulleted-list"><li style="list-style-type:disc">The latest change in net assets for [Redacted Year] was at [Redacted Dollar Amount] against revenues of [Redacted Dollar Amount], a decline from prior years. Their budget for [Redacted Year] assumes higher net revenue, at [Redacted Dollar Amount].</li></ul><p id="11cb7e8c-1da9-8160-a1dc-dc0f1bafe453" class=""><em><span style="border-bottom:0.05em solid">Repayment of Source Loan:</span></em></p><ul id="11cb7e8c-1da9-8199-99c1-fda180ebf94d" class="bulleted-list"><li style="list-style-type:disc">The repayment of the Source Loan will be from cash flow from the new clinic and interest reserves. In the event there is a shortfall from the [Redacted City] clinic, including from construction delays, revenues across all clinic facilities will be available to repay the new debt.</li></ul><ul id="11cb7e8c-1da9-8159-8ed5-e70317fe0486" class="bulleted-list"><li style="list-style-type:disc">The health clinics in the [Redacted Company Name] network benefits from diverse revenue sources, including patient services, with a large portion from [Redacted Program Name], the state version of Medicaid, along with Medicare, third party insurance, and patient self-pay. In addition, the FQHC receives significant grant revenue from the [Redacted Organization Name] to offset the cost of medical care delivered to uninsured patients.</li></ul><ul id="11cb7e8c-1da9-811d-8298-d232a2c564c9" class="bulleted-list"><li style="list-style-type:disc">[Redacted Company Name] has seen significant growth in the last [Redacted Number] years and has taken on debt to finance its clinic expansion. Despite this additional new debt, leverage remains relatively low and [Redacted Company Name] can easily meet its current and new debt obligations.</li></ul><ul id="11cb7e8c-1da9-8115-8fc6-fa66ef532bc8" class="bulleted-list"><li style="list-style-type:disc">Expenses have grown rapidly, about [Redacted Dollar Amount] from [Redacted Year] to [Redacted Year]. However, its strong revenue growth across diverse sources provides confidence that their operations will remain strong.</li></ul><p id="11cb7e8c-1da9-81c9-8064-e320504fb89f" class=""><em><span style="border-bottom:0.05em solid">Line of Credit:</span></em></p><p id="11cb7e8c-1da9-81c5-9075-d21cc4325c07" class="">The company has a line of credit of [Redacted Dollar Amount] with [Redacted Company Name] of which [Redacted Dollar Amount] is balance outstanding as on December 31, [Redacted Year], and [Redacted Year]. The maturity of this line of credit is [Redacted Month] [Redacted Year]. The utilization of this line of credit stands at about [Redacted Percentage], which shows that the company has prudent credit management, with the ability to draw the line further should the need arise.</p><p id="11cb7e8c-1da9-81e9-8bdd-d91550050778" class=""><strong><span style="border-bottom:0.05em solid">Balance Sheet</span></strong></p><p id="11cb7e8c-1da9-8086-bee5-cbd34e733382" class="">[Redacted table]</p><p id="72e71613-0e67-4d40-b49d-7d3500e9790d" class="">[Redacted Company Name]&#x27;s balance sheet is strong and reflects the [Redacted Number] clinics in its portfolio.</p><p id="72cb46b9-3db4-4b88-984c-2f3577766642" class=""><em><span style="border-bottom:0.05em solid">Assets:</span></em></p><ul id="2a899725-a816-4038-9d8a-0ca59f9e8439" class="bulleted-list"><li style="list-style-type:disc">[Redacted Company Name] has a strong current assets base resulting in a healthy liquidity for short-term needs.</li></ul><ul id="ac1e3776-ec9a-4938-8119-b0f250d306b8" class="bulleted-list"><li style="list-style-type:disc">[Redacted Company Name] has an increasing fixed assets and growth in construction in progress over the period of [Redacted Number] years, reflecting its expansion of clinics in its [Redacted Region] service area.</li></ul><p id="4b6c4f9a-5050-41f2-9757-f40960194886" class=""><em><span style="border-bottom:0.05em solid">Liabilities:</span></em></p><ul id="b160370a-185d-4e8a-8ad8-332f5d116acb" class="bulleted-list"><li style="list-style-type:disc">[Redacted Company Name] has controlled growth in its current liabilities. The current liabilities are half as compared to current assets resulting in its current ratio under [Redacted Number]x in the past [Redacted Number] years.</li></ul><ul id="a2d422a0-e2d0-4dd8-bfc4-8c65a675cce2" class="bulleted-list"><li style="list-style-type:disc">There increase in long term debt appears to support the acquisition of new assets—equipment, buildings, construction in progress and land.</li></ul><p id="3f165e3e-b3c9-4cab-819e-b06eccf1a423" class=""><em><span style="border-bottom:0.05em solid">Liquidity and Availability of Resources:</span></em></p><ul id="6b265080-73d7-4233-bddb-8cdc678b5a9a" class="bulleted-list"><li style="list-style-type:disc">Liquidity is strong and includes [Redacted Dollar Amount] in cash and [Redacted Dollar Amount] in short term investments. Liquidity levels have been consistent over the time period analyzed. [Redacted Company Name] has low leverage, with its net assets [Redacted Number]x higher than total liabilities.</li></ul><ul id="2cc72d7f-b8cd-4885-9835-5483f525d459" class="bulleted-list"><li style="list-style-type:disc">The borrower strives to maintain liquid financial assets sufficient to cover [Redacted Number] days of general expenditures.</li></ul><ul id="383f2f3e-724b-4975-a146-06ce8e799b44" class="bulleted-list"><li style="list-style-type:disc">The borrower&#x27;s policy is that [Redacted Percentage] or less of its cash on hand is invested in investment instruments with maturities of [Redacted Number]-[Redacted Number] months and less than [Redacted Percentage] in instruments with [Redacted Number]–[Redacted Number]-month maturities with minimal risk exposure to principal balances.</li></ul><ul id="399c36f7-30ee-47c7-bde6-4ae45fa60fcf" class="bulleted-list"><li style="list-style-type:disc">[Redacted Company Name] reports that it has no contingent liabilities.</li></ul><h1 id="11cb7e8c-1da9-8197-bae2-e93bc03e2504" class="">APPENDIX F – APPRAISAL SUMMARY</h1><p id="11cb7e8c-1da9-819e-9746-ff46456981ad" class="">The appraisal for the property was completed by [Redacted Company Name] on [Redacted Date]. The conclusion of the prospective market value upon completion and stabilization is based on the sales comparison approach and is determined to be [Redacted Dollar Amount]. The sales comparison approach utilized [Redacted Number] comparable properties, all medical office buildings in [Redacted Region], ranging from [Redacted Number] SF to [Redacted Number] SF. The unadjusted price per square foot of the set of comparables ranges from [Redacted Dollar Amount] to [Redacted Dollar Amount].</p><p id="11cb7e8c-1da9-8184-a0d6-c2d65dd795ad" class="">The appraiser made adjustments for market conditions and location:</p><ul id="11cb7e8c-1da9-815e-b1db-fa50d36ea1bb" class="bulleted-list"><li style="list-style-type:disc">The market conditions adjustment accounts for the differences in economic conditions at the time of the appraisal and the transaction date of the comparable properties. Comparables transferred between [Redacted Date Range] received a downward adjustment of [Redacted Percentage].</li></ul><ul id="11cb7e8c-1da9-8142-b616-cf02fc3e76b5" class="bulleted-list"><li style="list-style-type:disc">The location adjustment accounts for the proximity to users and investment activity of a particular property type in an area. Comparables [Redacted Numbers], which are located in locations rated higher than the subject property, receive a downward adjustment. Conversely, comparables [Redacted Numbers], which are located in locations rated lower than the subject property, receive an upward adjustment.</li></ul><p id="11cb7e8c-1da9-80d1-8eb7-fb0f3fa63b59" class="">[Redacted table]</p><p id="11cb7e8c-1da9-81f7-b6c1-d73e88641c14" class="">The result of the calculations is an indicated value per square foot of [Redacted Dollar Amount], resulting in an indicated value of [Redacted Dollar Amount]. In addition, the appraiser added [Redacted Dollar Amount] for solar panels to the indicated value, resulting in an indicated value upon completion and stabilization of [Redacted Dollar Amount]. The appraiser stated that the basis of using the cost of the solar equipment as an indication of value is simply another buyer would likely pay an equal amount to its cost for this component. We recognize that the concluded value as increased by the cost of the solar installation is higher per square foot than most of the comparables in the market. As lead lender, [Redacted Company Name] will have its internal appraisal review completed and we will update our conclusions on the property evaluation following this review.</p><p id="11cb7e8c-1da9-815e-8ea6-ebdb53fce5db" class="">The source lenders led by [Redacted Company Name] have requested additional collateral to support the total debt request of [Redacted Dollar Amount]. [Redacted Company Name] owns an office building in nearby [Redacted City], [Redacted State] and an appraisal has been commissioned to assess its value as collateral for the Source Loan. Both properties together must support an LTV of no higher than [Redacted Percentage].</p><p id="11cb7e8c-1da9-8076-a7a9-d36d4eed486d" class="">[Redacted table]</p><h1 id="11cb7e8c-1da9-8183-ae43-df25afd0c611" class="">APPENDIX G –CITY FIRST– KEY FINANCIAL METRICS</h1><p id="11cb7e8c-1da9-814e-83e6-d147ee882825" class="">[Redacted table]</p><h1 id="11cb7e8c-1da9-816d-9485-f63855be4057" class="">APPENDIX H –CREDIT RISK RATING GRID</h1><p id="11cb7e8c-1da9-8002-a01b-f0f6bbe2b1d2" class="">[Redacted table]</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
