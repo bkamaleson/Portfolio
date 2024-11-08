@@ -44,9 +44,9 @@ June 2020 - August 2021
 **EDUCATION**
 ---
 
-<span style = "float:right;">September 2012 - June 2016</span>
-DePaul University </br>
-<i>Bachelor's, Finance</i>
+DePaul University </br> 
+<i>Bachelor's, Finance</i></br>
+September 2012 - June 2016
 
 * Participated in an endowment management program that served as an apprenticeship to make buy/sell decisions on
 blue-chip equities, internationally or domestically
