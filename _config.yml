@@ -1,7 +1,7 @@
 plugins:
   - jekyll-relative-links
 title: Barclay Kamaleson
-logo: ./assets/imgs/000102740017.jpg
+logo: /assets/imgs/000102740017.jpg
 relative_links:
   enabled: true
   collections: true
