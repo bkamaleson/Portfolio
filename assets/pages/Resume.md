@@ -4,8 +4,8 @@
 **SUMMARY**
 ---
 
-National Community Investment Fund / Credit Analyst </br>
-Chicago, IL </br>
+National Community Investment Fund / Credit Analyst  
+Chicago, IL  
 May 2022 - PRESENT
 
 * Production
@@ -21,8 +21,8 @@ May 2022 - PRESENT
     * Revamped the existing database used for tracking impact metrics, which supported grant writing efforts
     * Assisted lead grant writers in constructing narratives backed by trends in the impact metric database
 
-Byline Bank / Credit Analyst </br>
-Chicago, IL </br>
+Byline Bank / Credit Analyst  
+Chicago, IL  
 August 2021 - May 2022
 
 * Ensured compliance with SBA lending policy and Byline Bank Commercial lending policy for all assignments
@@ -33,8 +33,8 @@ August 2021 - May 2022
 * Maintained communication with the Business Development Officer and applicant to ensure prompt and high-quality loan decision making
 * Led the underwriting for 13 loans with an average loan size of $528,300
 
-Byline Bank / Credit Analyst Associate </br>
-Chicago, IL </br>
+Byline Bank / Credit Analyst Associate  
+Chicago, IL  
 June 2020 - August 2021
 
 * Prepared post-approval credit Amended Authorities for closed loans where:
@@ -44,8 +44,8 @@ June 2020 - August 2021
 **EDUCATION**
 ---
 
-DePaul University </br> 
-<i>Bachelor's, Finance</i></br>
+DePaul University  
+<i>Bachelor's, Finance</i>  
 September 2012 - June 2016
 
 * Participated in an endowment management program that served as an apprenticeship to make buy/sell decisions on
