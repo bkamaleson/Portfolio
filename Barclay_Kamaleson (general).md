@@ -44,7 +44,7 @@ June 2020 - August 2021
 **EDUCATION**
 ---
 
-<div style = "float:right;">September 2012 - June 2016</div>
+<span style = "float:right;">September 2012 - June 2016</span>
 DePaul University </br>
 <i>Bachelor's, Finance</i>
 
